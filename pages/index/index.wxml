@@ -1,0 +1,27 @@
+<view>
+
+
+
+  <view class='page_row'>
+    <view class="search">
+      <view class="df search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <input class="" placeholder="输入任务编号" value="{{searchValue}}" bindinput='search_content' />
+      </view>
+    </view>
+    <view class='sousuo' bindtap='search' data-text="{{searchValue}}">搜索</view>
+  </view>
+
+
+  <swiper class="swiper_box" indicator-dots="{{ indicatorDots }}" autoplay="{{ autoplay }}" current="{{ current }}" interval="{{ interval }}" duration="{{ duration }}" circular="{{ circular }}" bindchange="swiperchange">
+    <block>
+      <swiper-item>
+        <image src="../../img/ya.jpg" class="slide-image" style='margin-top: 2px;vertical-align: middle;width:420px; height: 140px;'/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+
+
+</view>

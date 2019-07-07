@@ -1,0 +1,119 @@
+.jobs {
+}
+
+.input {
+  margin: 0rpx 30rpx 0rpx 30rpx;
+  background-color: white;
+  border-radius: 15px;
+  color: black;
+}
+
+.search {
+  width: 80%;
+}
+
+.search_arr {
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+}
+
+.search_arr input {
+  margin-left: 60rpx;
+  height: 60rpx;
+  border-radius: 5px;
+}
+
+.bc_text {
+  line-height: 68rpx;
+  height: 68rpx;
+  margin-top: 34rpx;
+}
+
+.sousuo {
+  margin-left: 15rpx;
+  width: 15%;
+  line-height: 150%;
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+}
+
+.page_row {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.searchcion {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  position: absolute;
+  left: 25rpx;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+/**/
+
+.scroll-list {
+  overflow: hidden;
+}
+
+page, .page, .page__bd {
+  height: 100%;
+}
+
+.page__bd {
+  padding-bottom: 0;
+}
+
+.weui-tab__content {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.searchbar-result {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.searchbar-result:before {
+  display: none;
+}
+
+.weui-cell {
+  padding: 12px 15px 12px 35px;
+}
+
+/* 返回顶部 */
+.goTop{
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  bottom: 50rpx;
+  background: white;
+  right: 30rpx;
+  border-radius: 50%;
+}
+
+
+.reward {  
+}
+
+.reward view {
+  white-space: nowrap;
+}
+
+.reward view text {
+  color: white;
+  font-size: 12px;
+  padding-right: 25rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-left: 20rpx;
+  white-space: nowrap;
+  border-radius: 30rpx;
+  background-color: #d3d0d0;
+}

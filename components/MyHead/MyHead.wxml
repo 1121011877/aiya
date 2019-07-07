@@ -1,0 +1,6 @@
+<view class="my_haed">
+{{cData}}
+<view>
+<slot> </slot>
+</view>
+</view>

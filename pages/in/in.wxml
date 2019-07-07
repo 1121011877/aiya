@@ -1,0 +1,27 @@
+<!--miniprogram/pages/in/in.wxml-->
+<swiper class="swiper_box" indicator-dots="true" autoplay="true" current="{{ current }}" interval="5000" duration="{{ duration }}" circular="{{ circular }}" bindchange="swiperchange">
+    <block>
+      <swiper-item>
+        <image src="../../img/1.jpg" class="slide-image" style='margin-top: 2px;vertical-align: middle;width:220px; height: 140px;'/>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../img/2.jpg" class="slide-image" style='margin-top: 2px;vertical-align: middle;width:220px; height: 140px;'/>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../img/3.jpg" class="slide-image" style='margin-top: 2px;vertical-align: middle;width:220px; height: 140px;'/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+<view style="margin-top:100rpx;">
+  <view style="text-align:center " >
+  <button class="weui-btn" type="primary" bindtap="doctor" formType='submit'>我是医生</button>    
+  </view>
+
+  <view style="text-align:center;margin-top:100rpx; " >
+  <button class="weui-btn" type="primary" bindtap="user" formType='submit'>我是病人</button>    
+  </view>
+</view>
+
+
+  

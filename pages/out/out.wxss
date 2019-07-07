@@ -1,0 +1,90 @@
+/*日期选择*/
+
+.modalBox {
+  width: 100%;
+  font-size: 32rpx;
+}
+
+.box {
+  margin: 0 auto;
+  width: 630rpx;
+}
+
+.calendarTitle {
+  /* margin: 0 auto;
+  width: 630rpx; */
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.calendarBox {
+  /* width: 630rpx; */
+  width: 100%;
+  margin: 0 auto;
+  border: 1rpx solid #ddd;
+}
+
+.week {
+  display: inline-block;
+  width: 90rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.dateBtn {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.dateBtn>button {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-size: 36rpx;
+}
+
+/* 模态框 */
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+}
+
+.modal-dialog {
+  width: 85%;
+  padding: 100rpx 30rpx 30rpx 30rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 5rpx;
+}
+
+/*按钮*/
+
+.btn {
+  
+  
+}

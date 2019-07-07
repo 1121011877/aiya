@@ -1,0 +1,23 @@
+<view bindtap='jump' class='job'>
+  <view style='display : none'>
+    <text>{{id}}</text>
+  </view>
+  <view>
+    <image src='{{picture}}' class='picture'></image>
+  </view>
+  <view class='title'>
+    <text>{{title}}</text>
+  </view>
+  <view class='type'>
+    <text>{{type}}</text>
+  </view>
+  <view class='reward'>
+    <text>{{reward}}</text>
+  </view>
+  <view class='receive'>
+    <text>{{receive}}</text> <!-- 接取人数 -->
+  </view>
+  <view class='end'>
+    <text>{{end}}</text>
+  </view>
+</view>

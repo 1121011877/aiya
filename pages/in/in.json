@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "发布任务",
+  "usingComponents": {
+    "popup": "/components/popup/popup"
+  }
+}

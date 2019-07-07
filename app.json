@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/in/in",
+    "pages/out/out",
+    "pages/Umy/Umy",
+    "pages/Dmy/Dmy",
+    "pages/index/index",
+    "pages/dzhuce/dzhuce",
+    "pages/uzhuce/uzhuce"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json"
+}

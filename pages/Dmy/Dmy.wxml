@@ -1,0 +1,46 @@
+<view class='userinfo'>
+  <image class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"></image>
+  <text class="userinfo-nickname">{{nickName}}</text>
+</view>
+
+<view class='list'>
+
+  <view class="weui-cells">
+    <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{ items }}" wx:key="" data-text="{{ item.path }}" data-index="{{ index }}" bindtap="jump">
+      <view class="weui-cell__hd">
+        <image src="{{ item.icon }}" style="margin-bottom: 2px;margin-right: 5px;vertical-align: middle;width:30px; height: 30px;"></image>
+      </view>
+      <view class="weui-cell__bd">{{ item.text }}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">
+        <text wx:if="{{ index === 0 }}">{{ user_job_publish_numb }}</text>
+        <text wx:if="{{ index === 1 }}">{{ user_job_receive_numb }}</text>
+        <text wx:if="{{ index === 2 }}">{{ user_job_complete_numb }}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="weui-cells">
+    <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{ settings }}" wx:key="" data-text="{{ item.path }}" data-index="{{ index }}" bindtap="jump1">
+      <view class="weui-cell__hd">
+        <image src="{{ item.icon }}" style="margin-bottom: 2px;margin-right: 5px;vertical-align: middle;width:30px; height: 30px;"></image>
+      </view>
+      <view class="weui-cell__bd">{{ item.text }}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">
+        <text wx:if="{{ index === 0 }}">{{ user_account_numb }}</text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="weui-cells">
+    <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{ message }}" wx:key="" data-text="{{ item.path }}" data-index="{{ index }}" bindtap="jump2">
+      <view class="weui-cell__hd">
+        <image src="{{ item.icon }}" style="margin-bottom: 2px;margin-right: 5px;vertical-align: middle;width:30px; height: 30px;"></image>
+      </view>
+      <view class="weui-cell__bd">{{ item.text }}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">
+        <text wx:if="{{ index === 0 }}">{{ user_message_numb }}</text>
+      </view>
+    </view>
+  </view>
+</view>
