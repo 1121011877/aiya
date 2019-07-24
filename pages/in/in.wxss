@@ -113,6 +113,7 @@ page, .page, .page__bd {
   border-radius: 30rpx;
   background-color: #ffffff;
 }
+/***********重构后更改和加入的部分************/
 /*********欢迎语部分****************/
 .welcome{
   padding: 100rpx 0 0 0;
@@ -140,6 +141,10 @@ page, .page, .page__bd {
 .footer{
 padding:230rpx 0 0 0; 
 font-size: 30rpx;
-color: #bebcbc;
+color: #a09e9e;
 text-align: center;
+}
+/***********背景************/
+.in{
+  background-color: #ffffff;
 }
