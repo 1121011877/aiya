@@ -1,5 +1,5 @@
 <!--miniprogram/pages/in/in.wxml-->
-<!--
+
 <swiper class="swiper_box" indicator-dots="true" autoplay="true" current="{{ current }}" interval="5000" duration="{{ duration }}" circular="{{ circular }}" bindchange="swiperchange">
     <block>
       <swiper-item>
@@ -13,13 +13,13 @@
       </swiper-item>
     </block>
   </swiper>
--->
+
 <view class="in">
 <view class="welcome">欢迎使用
-  <view class="a">xxxx小程序</view>
+  <!--<view class="a">xxxx小程序</view>-->
   <view class="b">请选择您的身份</view>
 </view>
-<view style="margin-top:100rpx;">
+<view style="margin-top:30rpx;">
   <view style="text-align:center " >
   <button class="weui-btn" type="primary" bindtap="doctor" formType='submit'>我是医生</button>    
   </view>

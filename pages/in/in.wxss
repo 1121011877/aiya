@@ -116,8 +116,8 @@ page, .page, .page__bd {
 /***********重构后更改和加入的部分************/
 /*********欢迎语部分****************/
 .welcome{
-  padding: 100rpx 0 0 0;
-  font-size: 60rpx;
+  padding: 30rpx 0 0 0;
+  font-size: 50rpx;
   font-weight: bolder;
   color: #11db54;
   text-align: center;
@@ -128,8 +128,8 @@ page, .page, .page__bd {
   color:black;
 }
 .welcome .b{
-  padding: 80rpx 0 0 0;
-  font-size: 40rpx;
+  padding: 30rpx 0 0 0;
+  font-size: 35rpx;
   font-weight: normal;
   color:black;
 }
@@ -139,7 +139,7 @@ page, .page, .page__bd {
 }
 /***********footer************/
 .footer{
-padding:230rpx 0 0 0; 
+padding:130rpx 0 0 0; 
 font-size: 30rpx;
 color: #a09e9e;
 text-align: center;
@@ -147,4 +147,14 @@ text-align: center;
 /***********背景************/
 .in{
   background-color: #ffffff;
+}
+/***********轮播图************/
+.swiper_box{
+padding: 5rpx 125rpx 0 125rpx;
+width: 500rpx;
+background-color: #ffffff;
+}
+.slide-image{
+width: 100rpx;
+height: 100rpx;
 }
