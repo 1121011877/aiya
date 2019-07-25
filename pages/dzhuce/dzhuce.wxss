@@ -5,18 +5,20 @@ page{
   margin-top: 20rpx;
   overflow: hidden;
   line-height: 100rpx;
-  border-bottom: 1rpx solid #ccc;
-  margin-left: 20rpx;
-  margin-right: 20rpx;
-  color: #777;
+  /*border-bottom: 1rpx solid rgba(6, 182, 73, 0.788);*/
+  border: 1rpx solid rgba(6, 182, 73, 0.788);
+  border-radius: 10rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  color:rgba(6, 182, 73, 0.788);
   background: #fff;
  
 }
 .info-input{
   height: 100rpx;
   margin-left: 50rpx;
-  color: #777;
-    float: left;
+  color: rgba(6, 182, 73, 0.788);
+  float: left;
 }
 .info-input1{
   height: 100rpx;
@@ -30,14 +32,14 @@ page{
   height: 70rpx;
   line-height: 70rpx;
   font-size: 28rpx;
-  background: #33FF99;
+  background: rgba(6, 182, 73, 0.788);
   float: left;
   margin-left: 10rpx;
   margin-top: 15rpx;
   color: #FFFFFF;
 }
 .submit{
-  margin-top: 50rpx;
+  margin-top: 30rpx;
   margin-left: 20rpx;
   margin-right: 20rpx;
   background: #00CCFF;
@@ -56,4 +58,31 @@ page{
 .return{
   margin: 20rpx;
  
+}
+/************重构部分************/
+.words{
+  font-size: 35rpx;
+  /*color: #777;*/
+  color:rgba(6, 182, 73, 0.788);
+  text-align: center;
+  padding: 20rpx 0 20rpx 0;
+}
+/***********背景************/
+.back{
+  background: #fff;
+}
+/***********按钮************/
+.weui-btn{
+  margin: 0 30rpx 0 30rpx;
+}
+/*********更改placeholder的文字颜色**********/
+.plah{
+  /*color: rgba(6, 182, 73, 0.788);*/
+}
+/***********footer************/
+.footer{
+padding:80rpx 0 0 0; 
+font-size: 30rpx;
+color: #a09e9e;
+text-align: center;
 }
