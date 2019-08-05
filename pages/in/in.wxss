@@ -116,6 +116,7 @@ page, .page, .page__bd {
 /***********重构后更改和加入的部分************/
 /*********欢迎语部分****************/
 .welcome{
+  position: flex;
   padding: 30rpx 0 0 0;
   font-size: 50rpx;
   font-weight: bolder;
@@ -123,11 +124,13 @@ page, .page, .page__bd {
   text-align: center;
 }
 .welcome .a{
+  position: flex;
   font-size: 40rpx;
   font-weight: bold;
   color:black;
 }
 .welcome .b{
+  position: flex;
   padding: 30rpx 0 0 0;
   font-size: 35rpx;
   font-weight: normal;
@@ -135,11 +138,14 @@ page, .page, .page__bd {
 }
 /*********按钮***********/
 .weui-btn{
+  position: flex;
   margin: 0 50rpx 0 50rpx;
 }
 /***********footer************/
 .footer{
-padding:130rpx 0 0 0; 
+position: flex;
+padding:180rpx 0 20rpx 0;
+/*padding:0 0 20rpx 0; */ 
 font-size: 30rpx;
 color: #a09e9e;
 text-align: center;
@@ -147,14 +153,24 @@ text-align: center;
 /***********背景************/
 .in{
   background-color: #ffffff;
+  position: flex;
+  flex-direction: column;
+  justify-content:center;
+  height: 100%;
 }
 /***********轮播图************/
+.picture{
+  position: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .swiper_box{
-padding: 5rpx 125rpx 0 125rpx;
-width: 500rpx;
+padding: 20rpx 160rpx 0 160rpx;
+height: 400rpx;
+/*width: 460rpx;*/
 background-color: #ffffff;
 }
 .slide-image{
-width: 100rpx;
-height: 100rpx;
+width: 400rpx;
+height: 400rpx;
 }

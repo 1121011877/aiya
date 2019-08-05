@@ -1,13 +1,4 @@
-<!--
- <swiper class="swiper_box" indicator-dots="{{ indicatorDots }}" autoplay="{{ autoplay }}" current="{{ current }}" interval="{{ interval }}" duration="{{ duration }}" circular="{{ circular }}" bindchange="swiperchange">
-    <block>
-      <swiper-item>
-        <image src="../../img/ya.jpg" class="slide-image" style='margin-top: 2px;vertical-align: middle;width:420px; height: 140px;'/>
-      </swiper-item>
-    </block>
-  </swiper>
-  -->
-  <view class="back">
+<view class="back">
     <view class="words">若您是医生，请注册，若不是，请返回。</view>
   <view wx:if="{{!success}}">
       <view class='row'>
