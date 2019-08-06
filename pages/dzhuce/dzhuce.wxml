@@ -1,3 +1,4 @@
+<navigator open-type="navigateTo"/>
 <view class="back">
     <view class="words">若您是医生，请注册，若不是，请返回。</view>
   <view wx:if="{{!success}}">

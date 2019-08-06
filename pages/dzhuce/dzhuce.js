@@ -15,10 +15,14 @@ Page({
     success: false,
     state: ''
   },
+  onUnload: function () {
+    wx.navigateTo({
+      url: '../pages/in/in',//指定界面
+    })
+  },
   /**
     * 获取验证码
     */
-
     tijiao(){
       wx.redirectTo({
         url: '../Dmy/Dmy',
