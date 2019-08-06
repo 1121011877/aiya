@@ -3,10 +3,10 @@
     <view class="weui-cells">
 
       <view class="weui-cell weui-cell_input">
-        <view class="weui-cell__hd">
+        <view class="weui-cell_hd">
           <view class="weui-label">标题</view>
         </view>
-        <view class="weui-cell__bd">
+        <view class="weui-cell_bd">
           <input placeholder="请输入任务标题" name="title" value='{{form_info}}' />
           
         </view>

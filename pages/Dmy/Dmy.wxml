@@ -1,10 +1,11 @@
-<view class='userinfo'>
+<!--头像栏-->
+<view class='user-info'>
   <image class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"></image>
   <text class="userinfo-nickname">{{nickName}}</text>
 </view>
-
+<!--信息栏-->
 <view class='list'>
-
+  <!--发布任务/已发布任务/完成情况-->
   <view class="weui-cells">
     <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{ items }}" wx:key="" data-text="{{ item.path }}" data-index="{{ index }}" bindtap="jump">
       <view class="weui-cell__hd">
@@ -31,7 +32,7 @@
     </view>
   </view>
 
-
+  <!--消息通知-->
   <view class="weui-cells">
     <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{ message }}" wx:key="" data-text="{{ item.path }}" data-index="{{ index }}" bindtap="jump2">
       <view class="weui-cell__hd">

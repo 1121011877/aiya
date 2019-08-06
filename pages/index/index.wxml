@@ -1,8 +1,5 @@
-<view>
-
-
-
-  <view class='page_row'>
+<view class="back">
+  <view class="page_row">
     <view class="search">
       <view class="df search_arr">
         <icon class="searchcion" size='20' type='search'></icon>
@@ -20,8 +17,4 @@
       </swiper-item>
     </block>
   </swiper>
-
-
-
-
 </view>

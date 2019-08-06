@@ -1,5 +1,4 @@
-.jobs {
-}
+
 
 .input {
   margin: 0rpx 30rpx 0rpx 30rpx;
@@ -40,7 +39,7 @@
 }
 
 .page_row {
-  margin-top: 20rpx;
+  padding-top: 20rpx;
   display: flex;
   flex-direction: row;
 }
@@ -116,4 +115,10 @@ page, .page, .page__bd {
   white-space: nowrap;
   border-radius: 30rpx;
   background-color: #d3d0d0;
+}
+/**********重构部分************/
+/*控制背景*/
+.back {
+  background: #fff;
+  height: 100%;
 }

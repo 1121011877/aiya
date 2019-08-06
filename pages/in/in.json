@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "发布任务",
+  "navigationBarTitleText": "欢迎界面",
   "usingComponents": {
     "popup": "/components/popup/popup"
   }
