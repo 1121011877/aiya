@@ -1,16 +1,16 @@
 .controls {
   position: relative;
-  top: 5%;
+  top: 50rpx;
   display: flex;
 }
 .noticeTXT{
-  font-size: 10PX;
+  font-size: 10rpx;
   color: rgb(12, 242, 240);
   text-align: center
 }
 .img{
-  width:400px; 
-  height:400px;
+  width:800rpx; 
+  height:800rpx;
 }
 .camera{
    width: 18rem; 
@@ -37,7 +37,7 @@
 }
 .weui-cells{
   margin: 100rpx 10rpx 0 10rpx;
-  width:250px;
+  width:500rpx;
 }
 .TC{
   text-align: center;

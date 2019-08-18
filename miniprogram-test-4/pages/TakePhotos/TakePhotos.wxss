@@ -5,18 +5,18 @@
   display: flex;
 }
 .noticeTXT{
-  font-size: 10PX;
+  font-size: 20rpx;
   color: rgb(12, 242, 240);
-  text-align: center
+  text-align: center;
 }
 .img{
-  width:400px; 
-  height:400px;
+  width:800rpx; 
+  height:800rpx;
 }
 .camera{
-   width: 25rem; 
-   height: 30rem;
-   margin: 50rpx 30rpx 50rpx 30rpx;
+   width: 670rpx; 
+   height: 800rpx;
+   margin: 50rpx 40rpx 50rpx 40rpx;
 }
 .overage{
 	background-color: #fff;
@@ -38,7 +38,7 @@
 }
 .weui-cells{
   margin: 100rpx 10rpx 0 10rpx;
-  width:250px;
+  width:500rpx;
 }
 .TC{
   text-align: center;
@@ -54,10 +54,11 @@
   color: rgb(110, 114, 116);
 }
 .bu{
-  margin: 0 40rpx 50rpx 50rpx;
+  margin: 0 40rpx 50rpx 40rpx;
 }
 .photo{
-  width: 25rem;
+  width: 670rpx;
+  height: 800rpx;
   /*height: 10rem;*/
-  margin: 50rpx 30rpx 50rpx 30rpx;
+  margin: 50rpx 40rpx 50rpx 40rpx;
 }
