@@ -45,12 +45,12 @@
 }
 
 .dateBtn>button {
-  width: 45%;
+  width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 50rpx 0 0 0;
   font-size: 36rpx;
 }
 
@@ -84,7 +84,17 @@
 
 /*按钮*/
 
-.btn {
-  
-  
+/*********重构部分********/
+.SL{
+  padding: 20rpx 0 20rpx 0;
+  text-align: center;
+  color: rgba(65, 63, 63, 0.801);
+}
+.weui-label{
+  margin: 20rpx 0 20rpx 0;
+}
+.weui-cell{
+  margin: 50rpx 0 0 0;
+  border: 2rpx solid #ddd;
+  background: #fff;
 }

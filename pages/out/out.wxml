@@ -1,14 +1,12 @@
  <view>
   <form bindsubmit="formSubmit" bindreset="formReset">
     <view class="weui-cells">
-
       <view class="weui-cell weui-cell_input">
         <view class="weui-cell_hd">
           <view class="weui-label">标题</view>
         </view>
         <view class="weui-cell_bd">
           <input placeholder="请输入任务标题" name="title" value='{{form_info}}' />
-          
         </view>
       </view>
     </view>
@@ -26,23 +24,19 @@
 
 
     <view class="weui-cells">
-
-      <view style='display:flex; justify-content: center;margin-top:10px;'>
-        <radio-group name="job_type" bindchange="job_type_choose">
+      <view style='display:flex; justify-content: center;margin-top:20rpx;'>
+        <radio-group name="job_type" bindchange="job_type_choose" style="margin-top:20rpx;">
           <radio value="img">下颌图片采集</radio>
           <radio value="word">关节图片采集</radio>
         </radio-group>
       </view>
-
-
+      <view class="SL">
+        <view>图片示例：</view>
+        <image src="../../img/open.png"></image>
+        </view>
       <view>
-       <view>图片示例：</view>
-      <image src="../../img/open.png"></image>
-      </view>
-
     </view>
 
-    <view>
       <view class="weui-cells weui-cells_after-title" style='margin-top:100rpx;'>
         <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" catchtap='showModalBtn'>
           <view class="weui-cell__bd">任务截止时间</view>
@@ -74,7 +68,7 @@
       </view>
     </view>
 
-    <view class='weui-cells'>
+    <!--<view class='weui-cells'>-->
 
       <view class="weui-cell weui-cell_input">
         <view class="weui-cell__hd">
@@ -95,7 +89,7 @@
         </view>
       </view>
 
-    </view>
+    <!--</view>-->
 
 
 
