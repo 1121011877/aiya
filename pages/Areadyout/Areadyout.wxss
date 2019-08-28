@@ -3,6 +3,9 @@
 .back{
   height: 100%;
 }
+page{
+  background: #F4F4F4;
+}
 /*卡片背景和边框*/
 .card{
   background: #fff;

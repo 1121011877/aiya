@@ -1,9 +1,13 @@
 <!--pages/Areadyout/Areadyout.wxml-->
 <view class="back">
+  <!--卡片-->
   <view class="card">
     <view class="no">1/1</view>
+    <!--内容-->
     <view class="title">下颚恢复训练
+      <!--起止时间-->
       <view class="time">2019/8/1———2019/9/10</view>
+      <!--完成情况人数【表格】-->
       <view class="number">
         <view class="F">
           <view class="L1">参与人数</view>
@@ -15,6 +19,5 @@
         </view>
       </view>
     </view>
-    
   </view>
 </view>
