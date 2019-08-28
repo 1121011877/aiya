@@ -75,8 +75,19 @@ Page({
 
   jump: function (e) {
     var type = e.currentTarget.dataset.text
+    var urldata = '../../pages/out/out'
+    console.log(type)
+    if(type=="post"){
+      var urldata ='../../pages/out/out'
+    }
+    else if(type=="continue"){
+      var urldata='../../pages/Areadyout/Areadyout'
+    }
+    else if(type=="complete"){
+      var urldata = '../../pages/Complete/Complete'
+    }
     wx.navigateTo({
-      url: '../../pages/out/out',
+      url: urldata,
     })
   },
 

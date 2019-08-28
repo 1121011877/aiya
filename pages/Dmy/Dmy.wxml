@@ -20,18 +20,6 @@
     </view>
   </view>
 
-  <view class="weui-cells">
-    <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{ settings }}" wx:key="" data-text="{{ item.path }}" data-index="{{ index }}" bindtap="jump1">
-      <view class="weui-cell__hd">
-        <image src="{{ item.icon }}" style="margin-bottom: 4rpx;margin-right: 10rpx;vertical-align: middle;width:60rpx; height: 60rpx;"></image>
-      </view>
-      <view class="weui-cell__bd">{{ item.text }}</view>
-      <view class="weui-cell__ft weui-cell__ft_in-access">
-        <text wx:if="{{ index === 0 }}">{{ user_account_numb }}</text>
-      </view>
-    </view>
-  </view>
-
   <!--消息通知-->
   <view class="weui-cells">
     <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{ message }}" wx:key="" data-text="{{ item.path }}" data-index="{{ index }}" bindtap="jump2">

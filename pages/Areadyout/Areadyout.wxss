@@ -1,0 +1,69 @@
+/* pages/Areadyout/Areadyout.wxss */
+/*页面背景*/
+.back{
+  height: 100%;
+}
+/*卡片背景和边框*/
+.card{
+  background: #fff;
+  height: 210rpx;
+  margin: 40rpx 30rpx 0 30rpx;
+  border-radius:20rpx 0 0 20rpx;
+  border-right: 20rpx #3DFFAD solid; 
+  box-shadow: 5rpx 6rpx 3rpx 3rpx rgb(228, 227, 227);
+}
+/*标题*/
+.title{
+  margin: 20rpx 20rpx 0 100rpx;
+  position:absolute;
+  font-size: 30rpx;
+}
+/*编号*/
+.no{
+  margin: 11rpx 0 0 11rpx;
+  height: 60rpx;
+  width: 60rpx;
+  position:absolute;
+  border-radius:50%;
+  background: #3DFFAD;
+  color:#fff;
+  /*实现文字垂直水平居中*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*起止时间*/
+.time{
+  color: rgba(156, 156, 156, 0.884);
+  font-size: 25rpx;
+}
+/*完成人数*/
+/**虚线分割线*/
+.number{
+  margin: 5rpx 10rpx 0 0;
+  width: 500rpx;
+  border-top:1px dashed #3DFFAD;
+  display: flex; 
+  flex-direction: row;
+  justify-content:space-around;
+}
+.F{
+  margin: 5rpx 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+.S{
+  margin: 5rpx 0 0 0;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+}
+.L1{
+  display: flex;
+  font-size: 25rpx;
+}
+.L2{
+  color: #3DFFAD;
+  font-weight: bold;
+}
