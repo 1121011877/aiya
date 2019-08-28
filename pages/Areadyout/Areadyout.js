@@ -29,6 +29,12 @@ Page({
 
   },
 
+  jump: function (e) {
+    wx.navigateTo({
+      url: '../../pages/out/out',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */

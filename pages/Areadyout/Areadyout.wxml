@@ -1,7 +1,7 @@
 <!--pages/Areadyout/Areadyout.wxml-->
 <view class="back">
   <!--卡片-->
-  <view class="card">
+  <view class="card" bindtap='jump'>
     <view class="no">1/1</view>
     <!--内容-->
     <view class="title">下颚恢复训练

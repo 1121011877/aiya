@@ -1,6 +1,5 @@
 {
   "pages": [
-    
     "pages/in/in",
     "pages/out/out",
     "pages/Umy/Umy",
@@ -9,7 +8,6 @@
     "pages/dzhuce/dzhuce",
     "pages/uzhuce/uzhuce",
     "pages/Areadyout/Areadyout"
-    
   ],
   "window": {
     "backgroundTextStyle": "dark",
