@@ -3,7 +3,7 @@
   margin: 90rpx 0 90rpx 50rpx;
   width: 650rpx;
   height: 320rpx;
-  color: #fff;
+  color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;

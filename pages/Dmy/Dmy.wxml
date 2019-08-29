@@ -1,7 +1,9 @@
 <!--头像栏-->
-<view class='user-info'>
-  <image class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"></image>
-  <text class="userinfo-nickname">{{nickName}}</text>
+<view class='header'>
+    <view class="user-info">
+      <open-data  type="userAvatarUrl" class="image"></open-data>
+      <open-data type="userNickName" lang="zh_CN" class="text"></open-data>
+    </view>
 </view>
 <!--信息栏-->
 <view class='list'>
