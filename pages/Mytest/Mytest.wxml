@@ -1,0 +1,17 @@
+<!--pages/Mytest/Mytest.wxml-->
+<!--pages/Areadyout/Areadyout.wxml-->
+<view class="back">
+  <!--卡片-->
+  <view class="card" bindtap='jump'>
+    <!--未完成的红标-->
+    <view class="no" hidden="{{ready}}"></view>
+    <!--内容-->
+    <view class="title">下颚恢复训练
+      <!--起止时间-->
+      <view class="time">2019/8/1———2019/9/10</view>
+      <!--每日次数-->
+      <view class="number">每日训练次数：<text>3</text></view>
+    </view>
+  </view>
+</view>
+

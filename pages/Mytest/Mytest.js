@@ -1,11 +1,11 @@
-// pages/Areadyout/Areadyout.js
+// pages/Mytest/Mytest.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    ready:false
   },
 
   /**
@@ -28,13 +28,11 @@ Page({
   onShow: function () {
 
   },
-
-  jump: function (e) {
+  jump:function(e){
     wx.navigateTo({
-      url: '../../pages/detail/detail',
+      url: '../../pages/detail/detail'
     })
   },
-
   /**
    * 生命周期函数--监听页面隐藏
    */

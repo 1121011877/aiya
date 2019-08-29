@@ -1,0 +1,46 @@
+/* pages/Mytest/Mytest.wxss */
+/*页面背景*/
+.back{
+  height: 100%;
+}
+page{
+  background: #F4F4F4;
+}
+/*卡片背景和边框*/
+.card{
+  background: #fff;
+  height: 210rpx;
+  margin: 40rpx 30rpx 0 30rpx;
+  border-radius:20rpx 0 0 20rpx;
+  border-right: 20rpx #3DFFAD solid; 
+  box-shadow: 5rpx 6rpx 3rpx 3rpx rgb(228, 227, 227);
+}
+/*标题*/
+.title{
+  margin: 20rpx 20rpx 0 100rpx;
+  position:absolute;
+  font-size: 30rpx;
+}
+/*编号*/
+.no{
+  margin: 15rpx 0 0 15rpx;
+  height: 20rpx;
+  width: 20rpx;
+  position:absolute;
+  border-radius:50%;
+  background:red;
+}
+/*起止时间*/
+.time{
+  color: rgba(156, 156, 156, 0.884);
+  font-size: 25rpx;
+}
+/**/
+.number{
+  margin: 10rpx 0 0 0;
+  font-size: 27rpx;
+}
+.number > text{
+  color:#3DFFAD;
+  font-weight: bolder;
+}

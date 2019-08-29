@@ -1,0 +1,22 @@
+<!--pages/detail/detail.wxml-->
+<!--任务内容-->
+<view class="card">
+<view class="content">
+  <view class="title">下颚恢复训练</view>
+  <view class="time">2019/8/1——2019/9/10</view>
+  <view class="num">每日训练次数：<text>3</text></view>
+  <view class="require">病人要每日按照要求完成嘴部开合运动。</view>
+</view>
+<!--完成情况-->
+<view class="table">
+  <view class="column">
+    <view class="C tit">未完成用户</view>
+    <view class="C">小明</view>
+  </view>
+  <view class="line"></view>
+  <view class="column">
+    <view class="C tit">已完成用户</view>
+    <view class="C">小红</view>
+  </view>
+</view>
+</view>

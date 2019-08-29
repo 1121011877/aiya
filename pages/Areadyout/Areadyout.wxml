@@ -11,11 +11,11 @@
       <view class="number">
         <view class="F">
           <view class="L1">参与人数</view>
-          <view class="L2">50</view>
+          <view class="L2">2</view>
         </view>
         <view class="S">
           <view class="L1">完成人数</view>
-          <view class="L2">25</view>
+          <view class="L2">1</view>
         </view>
       </view>
     </view>

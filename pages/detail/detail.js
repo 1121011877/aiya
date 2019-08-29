@@ -1,4 +1,4 @@
-// pages/Areadyout/Areadyout.js
+// pages/detail/detail.js
 Page({
 
   /**
@@ -27,12 +27,6 @@ Page({
    */
   onShow: function () {
 
-  },
-
-  jump: function (e) {
-    wx.navigateTo({
-      url: '../../pages/detail/detail',
-    })
   },
 
   /**

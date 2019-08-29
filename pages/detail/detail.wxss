@@ -1,0 +1,59 @@
+/* pages/detail/detail.wxss */
+/**/
+page{
+  background: #fff;
+}
+/*任务内容*/
+.card{
+  margin: 10rpx 40rpx 0 40rpx;
+  border-top:4px solid #3DFFAD;
+  box-shadow: 0rpx 6rpx 3rpx 2rpx rgb(228, 227, 227);
+  padding: 0 0 10rpx 0;
+}
+.content{
+  margin: 10rpx 40rpx 0 40rpx;
+}
+.title{
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+.time{
+  font-size: 30rpx;
+  color: rgb(153, 150, 150);
+  font-weight: bold;
+}
+.num{
+  font-size: 30rpx;
+}
+.require{
+  font-size: 26rpx;
+}
+/*完成情况*/
+.table{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  border-top:2px dashed #3DFFAD;
+  margin: 10rpx 40rpx 0rpx 40rpx;
+}
+.column{
+  margin: 10rpx 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+.C{
+  display: flex;
+  font-size: 26rpx;
+  margin:  0 0 5rpx 0;
+}
+/*表格中间竖分割线*/
+.line{
+  margin: 30rpx 0 0 0;
+  border-right: 2rpx #eee solid; 
+}
+/*表格列标题*/
+.tit{
+  font-weight: bold;
+  margin: 0 0 10rpx 0;
+}

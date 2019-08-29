@@ -18,11 +18,11 @@ Page({
         text: '已发布任务',
         path: 'continue'
       },
-      {
+      /*{
         icon: '../../img/icon_job_complete.png',
         text: '完成情况',
         path: 'complete',
-      },
+      },*/
     ],
   
     message: [{
