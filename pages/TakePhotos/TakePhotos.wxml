@@ -1,0 +1,12 @@
+<!--pages/TakePhotos/TakePhotos.wxml-->
+
+<camera mode="normal" device-position="front" flash="auto" binderror="error" class='camera' hidden='{{hiddenC}}'>
+</camera>
+<button type="primary" bindtap="start" class='bu' hidden='{{hiddenC}}'>拍照</button>
+<button type="primary" bindtap="back"  class='bu' hidden='{{hiddenC}}'>查看示例图片</button>
+
+<!-- 将这里隐藏 -->
+<image mode="widthFix" src="{{src}}" hidden='{{hidden}}' class='photo'></image>
+<!-- 在上传图片的方法里的setData里设置hidden：false 图片就会显示-->
+<button type="primary" bindtap="up" style='text-align:center' class='bu' hidden='{{hidden}}'>上传照片</button>
+<button type="primary" bindtap="next" style='text-align:center' class='bu' hidden='{{hidden}}'>重新拍摄</button>

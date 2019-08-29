@@ -1,11 +1,11 @@
-// pages/Mytest/Mytest.js
+// pages/error/error.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    ready:false
+
   },
 
   /**
@@ -28,11 +28,7 @@ Page({
   onShow: function () {
 
   },
-  jump:function(e){
-    wx.navigateTo({
-      url: '../../pages/welcome/welcome'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */

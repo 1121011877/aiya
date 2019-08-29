@@ -1,5 +1,9 @@
 {
   "pages": [
+    "pages/come/come",
+    "pages/welcome/welcome",
+    "pages/TakePhotos/TakePhotos",
+    "pages/error/error",
     "pages/in/in",
     "pages/out/out",
     "pages/Umy/Umy",
