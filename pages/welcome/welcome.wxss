@@ -1,3 +1,6 @@
+page{
+  background: #fff;
+}
 .controls {
   position: relative;
   top: 50rpx;
@@ -25,7 +28,9 @@
 .overage-header{
 	font-size: 30rpx;
   margin: 0 30rpx 0 40rpx;
-  
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
 }
 .words{
   text-align: center;
@@ -54,4 +59,12 @@
 }
 .bu{
   margin: 0 40rpx 50rpx 50rpx;
+}
+/*提示短语*/
+.tipWords{
+  margin: 0 20rpx 0 0;
+  padding: 10rpx 10rpx 10rpx 10rpx;
+  display: flex;
+  border-radius: 20rpx;
+  border: 1rpx dashed green;
 }

@@ -12,7 +12,10 @@
   </view>
   <view class="overage" style="text-align:left">
     <view  class="overage-header">
-      <text >　本实验采集到的所有照片将用于用户的健康管理，本组织将严格遵守职业道德，保护用户隐私</text>
+      <view class="tipWords">正面</view>
+      <view class="tipWords">尽可能张大嘴</view>
+      <view class="tipWords">平视镜头</view>
+     <!--> <text >　本实验采集到的所有照片将用于用户的健康管理，本组织将严格遵守职业道德，保护用户隐私</text>-->
       </view>
   </view>
 </view>
