@@ -21,7 +21,7 @@ Page({
 
     tijiao(){
       wx.redirectTo({
-        url: '../Mytest/Mytest',
+        url: '../Ucenter/Ucenter',
       })
     },
   return_home: function (e) {
