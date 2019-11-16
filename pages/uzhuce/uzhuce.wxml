@@ -8,43 +8,42 @@
  <view wx:if="{{!success}}">
     <view class="words">若您是患者，请注册，若不是，请返回。</view>
     <!-- 表格内容 -->
-    <view class='row'>
+    <form bindsubmit="submit">
+      <view class='row'>
         <view class='info'>
-               <input   class= 'info-input' bindinput="handleNewChangesAgain" placeholder="姓名" />
-         </view>
-    </view>
-    <view class='row'>
+          <input   class= 'info-input' bindinput="handleNewChangesAgain" placeholder="姓名" name="userName"/>
+        </view>
+      </view>
+      <view class='row'>
         <view class='info'>
-               <input class= 'info-input' bindinput="handleNewChangesAgain" placeholder="性别" />
-         </view>
-    </view>
-    <view class='row'>
+          <input class= 'info-input' bindinput="handleNewChangesAgain" placeholder="性别" name="userSex"/>
+        </view>
+      </view>
+      <view class='row'>
         <view class='info'>
-               <input class= 'info-input' bindinput="handleNewChanges" placeholder="年龄" />
+          <input class= 'info-input' bindinput="handleNewChanges" placeholder="年龄" name="userAge"/>
          </view>
-    </view>
-    <view class='row'>
-            <view class='info'>
-                  <input  class= 'info-input' bindinput="handleInputPhone" placeholder="手机号" />
-            </view>
-              <button class='button' bindtap='doGetCode' disabled='{{disabled}}' style="background-color:{{color}}" >{{text}}</button>
-    </view>
-    <view class='row'>
-            <view class='info'>
-                  <input  class= 'info-input' bindinput="handleVerificationCode" placeholder="验证码" />
-            </view>
-    </view>
-
-    <view class='row'>
-          <view class='info'>
-                <input  class= 'info-input' bindinput="handleNewChangesAgain" placeholder="诊断类型" />
-          </view>
-    <!--<view style="text-align:center;margin-top:100rpx; " >
-    <button class="weui-btn" type="primary" bindtap="tijiao" formType='submit'>提交</button>    
-    </view>-->
-    </view>
-    <button class="weui-btn" type="primary" bindtap="tijiao" formType='submit'>提交</button> 
+      </view>
+      <view class='row'>
+        <view class='info'>
+          <input  class= 'info-input' bindinput="handleInputPhone" placeholder="手机号" name="userPhone"/>
+        </view>
+        <button class='button' bindtap='doGetCode' disabled='{{disabled}}' style="background-color:{{color}}" >{{text}}</button>
+      </view>
+      <view class='row'>
+        <view class='info'>
+          <input  class= 'info-input' bindinput="handleVerificationCode" placeholder="验证码" name="userVerification"/>
+        </view>
+      </view>
+      <view class='row'>
+        <view class='info'>
+          <input  class= 'info-input' bindinput="handleNewChangesAgain" placeholder="诊断类型" />
+        </view>
+      </view>
+      <button class="weui-btn" type="primary" formType='submit'>提交</button> 
+    </form>
  </view>
+
  <view class = 'success' wx:if="{{success}}">
     <view class='cheer'><icon type="success" size="24"/> 恭喜您注册成功!</view>
     <button type = "default" class = 'return' bindtap='return_home'>返回首页</button>

@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
 
   /**
@@ -23,7 +24,7 @@ Page({
   /**
     * 获取验证码
     */
-    tijiao(){
+    tijiao: function(){
       wx.redirectTo({
         url: '../Dmy/Dmy',
       })
@@ -152,7 +153,82 @@ Page({
     })
 
   },
-  submit: function (e) {
+  // 提交表单
+  submit: function(e){
+    // 判断文字内容
+    if (e.detail.value.dName.length == 0 || e.detail.value.dName.length>=8){
+      wx.showToast({
+        title: '姓名不能为空或过长！',
+        icon: 'none',
+        duration: 1500
+      })
+    }else if(e.detail.value.dPhone.length == 0){
+      wx.showToast({
+        title: '手机号不能为空！',
+        icon: 'none',
+        duration: 1500
+      })
+    }else if(e.detail.value.dMail.length == 0){
+      wx.showToast({
+        title: '邮箱不能为空！',
+        icon: 'none',
+        duration: 1500
+      })
+    }else if(e.detail.value.dHospital.length == 0){
+      wx.showToast({
+        title: '医院不能为空！',
+        icon: 'none',
+        duration: 1500
+      })
+    }else if (e.detail.value.dOffice.length == 0) {
+      wx.showToast({
+        title: '科室不能为空！',
+        icon: 'none',
+        duration: 1500
+      })
+    }else{
+      wx.request({
+        url: 'http://47.100.248.211:7230/aiya/doctor/save',
+        header: {
+          "Content-Type": "application/json"
+        },
+        method: "POST",
+        data: {
+          doctor:{
+            // "dHospital": e.detail.value.dHospital,
+            // "dMail": e.detail.value.dMail,
+            // "dName": e.detail.value.dName,
+            // "dOffice": e.detail.value.dOffice,
+            // "dOpenid": app.globalData.openId,
+            // "dPhone": e.detail.value.dPhone
+            dHospital: "xxx",
+            dMail: "123",
+            dName: "xxx",
+            dOffice: "xxx",
+            dOpenid: "123",
+            dPhone:"123",
+          },
+        },
+        success: function(res){
+          console.log(res.data);
+          if(res.data.code == 0){
+            wx.showToast({
+              title: '提交失败！',
+              icon: 'loading',
+              duration: 1500
+            })
+          }else {
+            wx.showToast({
+              title: '提交成功！',
+              icon: 'success',
+              duration: 1000
+            })
+          }
+        }
+      })
+    }
+  },
+  /*submit: function (e) {
     var that = this
     if (this.data.Code == '') {
       wx.showToast({
@@ -210,6 +286,7 @@ Page({
       })
     }
   },
+  */
   /**
    * 用户点击右上角分享
    */

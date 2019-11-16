@@ -148,59 +148,48 @@ Page({
 
   },
   submit: function (e) {
-    var that = this
-    if (this.data.Code == '') {
+    if (e.detail.value.userName == '') {
       wx.showToast({
-        title: '请输入验证码',
-        image: '/images/error.png',
+        title: '用户名不能为空',
+        image: 'none',
         duration: 2000
       })
-      return
-    } else if (this.data.Code != this.data.VerificationCode) {
+    } else if (e.detail.value.userAge == '') {
       wx.showToast({
-        title: '验证码错误',
-        image: '/images/error.png',
+        title: '年龄不能为空',
+        image: 'none',
         duration: 2000
       })
-      return
-    }
-    else if (this.data.NewChanges == '') {
+    }else if (e.detail.value.userPhone == '') {
       wx.showToast({
-        title: '请输入密码',
-        image: '/images/error.png',
+        title: '手机号码不能为空',
+        image: 'none',
         duration: 2000
       })
-      return
-    } else if (this.data.NewChangesAgain != this.data.NewChanges) {
-      wx.showToast({
-        title: '两次密码不一致',
-        image: '/images/error.png',
-        duration: 2000
-      })
-      return
-    } else {
-      var that = this
-      var phone = that.data.phone;
+    }else {
+      console.log(e.detail.value);
       wx.request({
-        url: getApp().globalData.baseUrl + '/Coachs/insert',
+        url: 'http://47.100.248.211:7230/aiya/user/save',
         method: "POST",
-        data: {
-          coachid: phone,
-          coachpassword: that.data.NewChanges
+        data:{
+          userAge:e.detail.value.userAge,
+          userName:e.detail.value.userName,
+          userPhone:e.detail.value.userPhone,
+          userOpenid:"1234"
         },
         header: {
-          "content-type": "application/x-www-form-urlencoded"
+          "content-type": "application/json"
         },
         success: function (res) {
+          console.log(res);
           wx.showToast({
             title: '提交成功~',
-            icon: 'loading',
+            icon: 'success',
             duration: 2000
           })
-          console.log(res)
-          that.setData({
-            success: true
-          })
+          // that.setData({
+          //   success: true
+          // })
         }
       })
     }

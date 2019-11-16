@@ -89,7 +89,7 @@ Page({
       var urldata ='../../pages/out/out'
     }
     else if(type=="continue"){
-      var urldata='../../pages/Areadyout/Areadyout'
+      var urldata ='../../pages/Mytest/Mytest'
     }
     else if(type=="complete"){
       var urldata = '../../pages/Complete/Complete'
