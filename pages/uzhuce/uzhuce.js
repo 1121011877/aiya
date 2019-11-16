@@ -180,6 +180,7 @@ Page({
         header: {
           "content-type": "application/json"
         },
+        //成功
         success: function (res) {
           console.log(res);
           wx.showToast({
