@@ -172,10 +172,10 @@ Page({
         url: 'http://47.100.248.211:7230/aiya/user/save',
         method: "POST",
         data:{
-          userAge:e.detail.value.userAge,
-          userName:e.detail.value.userName,
-          userPhone:e.detail.value.userPhone,
-          userOpenid:"1234"
+          "userAge":e.detail.value.userAge,
+          "userName":e.detail.value.userName,
+          "userPhone":e.detail.value.userPhone,
+          "userOpenid":"1234"
         },
         header: {
           "content-type": "application/json"
