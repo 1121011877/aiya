@@ -168,20 +168,21 @@ Page({
       })
     }else {
       console.log(e.detail.value);
-      var user = {
-        "userAge": e.detail.value.userAge,
-        "userName": e.detail.value.userName,
-        "userPhone": e.detail.value.userPhone,
-        "userOpenid": "1234",
-        "userId": "12"
-      };
+      var user = {};
+        user.userAge= e.detail.value.userAge;
+        user.userName=e.detail.value.userName;
+        user.userPhone=e.detail.value.userPhone;
+        user.userOpenid="1234";
+        user.userId="12";
+      var user1 = e.detail.value;
+      console.log(user);
       wx.request({
-        url: 'http://47.100.248.211:7230/aiya/user/save',
+        //url: 'http://47.100.248.211:7230/aiya/user/save',
+        url: 'http://localhost:7230/aiya/user/save',
         method: "POST",
-        data:{
-          user
-        },
+        data:user1,
         header: {
+          "Accept": "application/json, text/javascript, */*; q=0.01",
           "content-type": "application/json"
         },
         //成功
