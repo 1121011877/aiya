@@ -187,15 +187,14 @@ Page({
         duration: 1500
       })
     }else{
+      var doctor=e.detail.value;
       wx.request({
         url: 'http://47.100.248.211:7230/aiya/doctor/save',
         header: {
           "Content-Type": "application/json"
         },
         method: "POST",
-        data: {
-          doctor: e.detail.value
-        },
+        data: doctor,
         success: function(res){
           console.log(res.data);
           if(res.data.code == 0){
