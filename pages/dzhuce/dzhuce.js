@@ -194,20 +194,7 @@ Page({
         },
         method: "POST",
         data: {
-          doctor:{
-            // "dHospital": e.detail.value.dHospital,
-            // "dMail": e.detail.value.dMail,
-            // "dName": e.detail.value.dName,
-            // "dOffice": e.detail.value.dOffice,
-            // "dOpenid": app.globalData.openId,
-            // "dPhone": e.detail.value.dPhone
-            dHospital: "xxx",
-            dMail: "123",
-            dName: "xxx",
-            dOffice: "xxx",
-            dOpenid: "123",
-            dPhone:"123",
-          },
+          doctor: e.detail.value
         },
         success: function(res){
           console.log(res.data);
