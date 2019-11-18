@@ -168,14 +168,18 @@ Page({
       })
     }else {
       console.log(e.detail.value);
+      var user = {
+        "userAge": e.detail.value.userAge,
+        "userName": e.detail.value.userName,
+        "userPhone": e.detail.value.userPhone,
+        "userOpenid": "1234",
+        "userId": "12"
+      };
       wx.request({
         url: 'http://47.100.248.211:7230/aiya/user/save',
         method: "POST",
         data:{
-          "userAge":e.detail.value.userAge,
-          "userName":e.detail.value.userName,
-          "userPhone":e.detail.value.userPhone,
-          "userOpenid":"1234"
+          user
         },
         header: {
           "content-type": "application/json"
