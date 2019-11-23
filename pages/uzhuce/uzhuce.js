@@ -171,8 +171,8 @@ Page({
       var user = e.detail.value;
       console.log(user);
       wx.request({
-        //url: 'http://47.100.248.211:7230/aiya/user/save',
-        url: 'http://localhost:7230/aiya/user/save',
+        url: 'http://47.100.248.211:7230/aiya/user/save',
+        //url: 'http://localhost:7230/aiya/user/save',
         method: "POST",
         data:user,
         header: {
@@ -182,14 +182,23 @@ Page({
         //成功
         success: function (res) {
           console.log(res);
-          wx.showToast({
-            title: '提交成功~',
-            icon: 'success',
-            duration: 2000
-          })
-          // that.setData({
-          //   success: true
-          // })
+          if (res.data.code == 0) {
+            wx.showToast({
+              title: '提交失败！',
+              icon: 'loading',
+              duration: 1500
+            })
+          } else {
+            wx.showToast({
+              title: '提交成功！',
+              icon: 'success',
+              duration: 1000
+            }),
+            //跳转到病人个人中心
+            wx.redirectTo({
+              url: '../Ucenter/Ucenter',
+            })
+          }
         }
       })
     }

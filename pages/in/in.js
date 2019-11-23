@@ -1,4 +1,6 @@
 // miniprogram/pages/in/in.js
+const app = getApp();
+
 Page({
 
   /**
@@ -15,10 +17,27 @@ Page({
 
   },
 doctor:function(){
-  wx.redirectTo({
-    url: '../dzhuce/dzhuce',
+  const nowcode = app.globalData.code;
+  console.log("incode: " + nowcode);
+  var urlpage = null;
+  //从服务器获取医生数据，判断医生是否已经注册
+  wx.request({
+    url: 'http://47.100.248.211:7230/aiya/doctor/get',
+    data: nowcode,
+    method: 'get',
+    dataType: 'json',
+    success: function (res) {
+      console.log(res);
+      if(res.data.data == null){
+        urlpage = '../dzhuce/dzhuce';
+      }else{
+        urlpage = '../Dmy/Dmy';
+      }
+      wx.redirectTo({
+        url: urlpage,
+      })
+    }
   })
-
 },
   user: function () {
     wx.redirectTo({

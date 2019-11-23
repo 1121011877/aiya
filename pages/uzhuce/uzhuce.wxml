@@ -1,10 +1,3 @@
-<!-- <swiper class="swiper_box" indicator-dots="{{ indicatorDots }}" autoplay="{{ autoplay }}" current="{{ current }}" interval="{{ interval }}" duration="{{ duration }}" circular="{{ circular }}" bindchange="swiperchange">
-    <block>
-      <swiper-item>
-        <image src="../../img/ya.jpg" class="slide-image" style='margin-top: 2px;vertical-align: middle;width:420px; height: 140px;'/>
-      </swiper-item>
-    </block>
-  </swiper>-->
  <view wx:if="{{!success}}">
     <view class="words">若您是患者，请注册，若不是，请返回。</view>
     <!-- 表格内容 -->

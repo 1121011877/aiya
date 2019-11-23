@@ -188,6 +188,7 @@ Page({
       })
     }else{
       var doctor=e.detail.value;
+      console.log(doctor);
       wx.request({
         url: 'http://47.100.248.211:7230/aiya/doctor/save',
         header: {
@@ -208,71 +209,16 @@ Page({
               title: '提交成功！',
               icon: 'success',
               duration: 1000
+            }),
+            //跳转到医生个人中心
+            wx.redirectTo({
+              url: '../Dmy/Dmy',
             })
           }
         }
       })
     }
   },
-  /*submit: function (e) {
-    var that = this
-    if (this.data.Code == '') {
-      wx.showToast({
-        title: '请输入验证码',
-        image: '/images/error.png',
-        duration: 2000
-      })
-      return
-    } else if (this.data.Code != this.data.VerificationCode) {
-      wx.showToast({
-        title: '验证码错误',
-        image: '/images/error.png',
-        duration: 2000
-      })
-      return
-    }
-    else if (this.data.NewChanges == '') {
-      wx.showToast({
-        title: '请输入密码',
-        image: '/images/error.png',
-        duration: 2000
-      })
-      return
-    } else if (this.data.NewChangesAgain != this.data.NewChanges) {
-      wx.showToast({
-        title: '两次密码不一致',
-        image: '/images/error.png',
-        duration: 2000
-      })
-      return
-    } else {
-      var that = this
-      var phone = that.data.phone;
-      wx.request({
-        url: getApp().globalData.baseUrl + '/Coachs/insert',
-        method: "POST",
-        data: {
-          coachid: phone,
-          coachpassword: that.data.NewChanges
-        },
-        header: {
-          "content-type": "application/x-www-form-urlencoded"
-        },
-        success: function (res) {
-          wx.showToast({
-            title: '提交成功~',
-            icon: 'loading',
-            duration: 2000
-          })
-          console.log(res)
-          that.setData({
-            success: true
-          })
-        }
-      })
-    }
-  },
-  */
   /**
    * 用户点击右上角分享
    */

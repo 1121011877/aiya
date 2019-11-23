@@ -57,3 +57,87 @@ page{
   font-weight: bold;
   margin: 0 0 10rpx 0;
 }
+/* 添加按钮 */
+.addbtn{
+  height: 100rpx;
+  width: 100rpx;
+  background: #3DFFAD;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px rgba(100, 100, 100,0.5);
+  position:fixed;
+  bottom: 10rpx;
+  right: 10rpx;
+  color: #fff;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 50px;
+  transition: all 0.3s;
+  z-index: 11;
+}
+/* 关闭按钮 */
+.closebtn{
+  transform: rotate(45deg);
+}
+/* 搜索背景 */
+.searchback{
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 0;
+}
+/* 搜索框 */
+.search{
+  /* margin: 50rpx 0; */
+  margin: 50rpx auto;
+}
+/* 手机号搜索框 */
+.phone{
+  border: 1px solid rgb(173, 173, 173);
+  margin-right: 10rpx;
+  margin-left: 80rpx;
+  width: 60%;
+  border-radius: 10rpx;
+  display: inline-block;
+  color: #fff;
+}
+/* 搜索按钮 */
+.searchbtn{
+  height: 50rpx;
+  font-size: 12px; 
+  /* width: 50rpx; */
+  width: 110rpx;
+  color: #000;
+  background: #fff;
+  display: inline-block;
+}
+/* 搜索出来的用户信息 */
+.user{
+  margin: auto;
+  width: 78%;
+  height: auto;
+  background: #fff;
+  color: #000;
+  padding: 10rpx 0;
+}
+.detail{
+  margin: 10rpx 20rpx;
+}
+.name,.age{
+  display: inline;
+}
+/* 病人信息中的添加按钮 */
+.adduser{
+  height: 60rpx;
+  width: 60rpx;
+  background: #3DFFAD;
+  color: #fff;
+  font-size: 20px;
+  float: right;
+  margin: -80rpx auto;
+  padding-left: 20rpx;
+  transition: all 1s;
+}
+.added{
+  background: rgb(75, 133, 109);
+}
