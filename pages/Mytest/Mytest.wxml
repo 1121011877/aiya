@@ -2,7 +2,7 @@
 <!--pages/Areadyout/Areadyout.wxml-->
 <view class="back">
   <!--卡片-->
-  <view class="card" bindtap='jump'>
+  <view class="card" bindtap='jump' wx:for-items="{{userjob}}" wx:for-item="item" id="{{item.uobId}}">
     <!--未完成的红标-->
     <view class="no" hidden="{{ready}}"></view>
     <!--内容-->

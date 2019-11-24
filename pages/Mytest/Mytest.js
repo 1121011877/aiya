@@ -5,14 +5,39 @@ Page({
    * 页面的初始数据
    */
   data: {
-    ready:false
+    ready:false,
+    // userid
+    userid:null,
+    // userjob列表
+    userjob:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      userid:options.userid
+    })
+    console.log("userid: "+this.data.userid);
+    var code = this.data.userid;
+    var that = this;
+    wx.request({
+      url: 'http://47.100.248.211:7230/aiya/user/getUserJobList',
+      method: 'get',
+      header: {
+        'content-type': 'application/json'
+      },
+      data:{
+        code
+      },
+      success: function(res){
+        console.log(res);
+        that.setData({
+          userjob:res.data.data
+        })
+      }
+    })
   },
 
   /**
@@ -29,8 +54,9 @@ Page({
 
   },
   jump:function(e){
+    var jobid = e.currentTarget.id;
     wx.navigateTo({
-      url: '../../pages/welcome/welcome'
+      url: '../../pages/welcome/welcome?jobid='+jobid
     })
   },
   /**

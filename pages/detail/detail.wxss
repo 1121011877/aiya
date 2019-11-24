@@ -141,3 +141,9 @@ page{
 .added{
   background: rgb(75, 133, 109);
 }
+/* 查无此人 */
+.none{
+  color: #eee;
+  margin: auto;
+  text-align: center;
+}

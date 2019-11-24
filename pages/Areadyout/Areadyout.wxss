@@ -40,15 +40,21 @@ page{
   color: rgba(156, 156, 156, 0.884);
   font-size: 25rpx;
 }
+/* 描述 */
+.describe{
+  color: rgb(100, 100, 100);
+  font-size: 25rpx;
+  margin: 20rpx 0 0 0;
+}
 /*完成人数*/
 /**虚线分割线*/
 .number{
   margin: 5rpx 10rpx 0 0;
   width: 500rpx;
   border-top:1px dashed #3DFFAD;
-  display: flex; 
+  /* display: flex; 
   flex-direction: row;
-  justify-content:space-around;
+  justify-content:space-around; */
 }
 .F{
   margin: 5rpx 0 0 0;

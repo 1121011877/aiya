@@ -1,14 +1,18 @@
 <!--pages/Areadyout/Areadyout.wxml-->
 <view class="back">
   <!--卡片-->
-  <view class="card" bindtap='jump'>
-    <view class="no">1/1</view>
+  <view class="card" bindtap='jump' wx:for-items='{{arrJob}}' wx:for-item='item' id="{{item.jobId}}" data-title="{{item.jobTitle}}" data-creattime="{{item.createTime}}" data-describe="{{item.jodDescribe}}">
+    <view class="no">{{item.jobId}}</view>
     <!--内容-->
-    <view class="title">下颚恢复训练
+    <view class="title">{{item.jobTitle}}
       <!--起止时间-->
-      <view class="time">2019/8/1———2019/9/10</view>
+      <view class="time">{{item.createTime}}</view>
+      <!-- 分割线 -->
+      <view class="number"></view>
+      <!-- 描述 -->
+      <view class="describe">{{item.jodDescribe}}</view>
       <!--完成情况人数【表格】-->
-      <view class="number">
+      <!-- <view class="number">
         <view class="F">
           <view class="L1">参与人数</view>
           <view class="L2">2</view>
@@ -17,7 +21,7 @@
           <view class="L1">完成人数</view>
           <view class="L2">1</view>
         </view>
-      </view>
+      </view> -->
     </view>
   </view>
 </view>

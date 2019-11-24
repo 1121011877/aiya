@@ -62,3 +62,20 @@
   /*height: 10rem;*/
   margin: 50rpx 40rpx 50rpx 40rpx;
 }
+/* 人物线框 */
+.person{
+  position: absolute;
+  top: 130rpx;
+  left: 18rpx;
+  height: 600rpx;
+  width: 700rpx;
+}
+/* 提示 */
+.tips{
+  width: 250rpx;
+  padding: 5rpx;
+  margin: auto;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  border: 1rpx dashed green;
+}

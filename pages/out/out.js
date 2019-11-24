@@ -27,6 +27,8 @@ Page({
 
     flag: "false",
     account: "true",
+    // 医生id
+    doctorId:null
   },
   
   //选择日期
@@ -60,7 +62,9 @@ Page({
     //将当前日期赋值给date
     this.setData({
       date: DATE,
-    });
+      doctorId:options.docId
+    })
+    console.log("out:doctorId: "+this.data.doctorId);
   },
 
   onShow: function () {
@@ -98,19 +102,27 @@ Page({
   //表单提交
 
   formSubmit: function (e) {
-    var job = e.detail.value;
-    job.dId = "12";
+    var title = e.detail.value.jobTitle;
+    var describe = e.detail.value.jodDescribe;
+    var type = e.detail.value.jobType;
+    var id = this.data.doctorId;
+    var file = "../../img/open.png";
     // job.jobId = 123;
     // job.jobImgid = "1";
     // job.jobImgpath = "../../img/open.png";
-    console.log(job);
     wx.request({
       url: 'http://47.100.248.211:7230/aiya/job/save',
       method: 'POST',
       header: {
         'content-type': 'application/json'
       },
-      data: job,
+      data: {
+        describe,
+        file,
+        title,
+        id,
+        type
+      },
       success: function (res) {
         console.log(res);
         wx.navigateTo({

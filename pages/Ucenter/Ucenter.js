@@ -30,8 +30,8 @@ Page({
       text: '消息通知',
       path: 'message'
     }],
-
-
+    // userid
+    userId:null
   },
 
   /**
@@ -46,6 +46,25 @@ Page({
             success(res) { }
           })
         }
+      }
+    }),
+    console.log("");
+    const nowcode = app.globalData.code;
+    console.log("incode: " + nowcode);
+    var that = this;
+    //从服务器获取病人数据，获取病人的id
+    wx.request({
+      url: 'http://47.100.248.211:7230/aiya/user/get',
+      data: nowcode,
+      method: 'get',
+      dataType: 'json',
+      success: function (res) {
+        console.log(res);
+        that.setData({
+          // 先这么写，后面会修改id的名称
+          // userId:res.data.userId
+          userId: 2
+        })
       }
     })
 
@@ -89,7 +108,7 @@ Page({
       var urldata ='../../pages/out/out'
     }
     else if(type=="continue"){
-      var urldata ='../../pages/Mytest/Mytest'
+      var urldata ='../../pages/Mytest/Mytest?userid='+this.data.userId
     }
     else if(type=="complete"){
       var urldata = '../../pages/Complete/Complete'

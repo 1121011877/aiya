@@ -14,7 +14,16 @@ Page({
     NewChanges: '',
     NewChangesAgain: '',
     success: false,
-    state: ''
+    state: '',
+  },
+  /**
+  * 生命周期函数--监听页面加载
+  */
+  onLoad: function (options) {
+    var that = this;
+    that.setData({
+      dCode: options.dCode,
+    })
   },
   onUnload: function () {
     wx.navigateTo({
@@ -188,14 +197,19 @@ Page({
       })
     }else{
       var doctor=e.detail.value;
+      var code = app.globalData.code;
       console.log(doctor);
+      console.log("dCode: "+code);
       wx.request({
         url: 'http://47.100.248.211:7230/aiya/doctor/save',
         header: {
           "Content-Type": "application/json"
         },
         method: "POST",
-        data: doctor,
+        data: {
+          doctor,
+          code
+          },
         success: function(res){
           console.log(res.data);
           if(res.data.code == 0){

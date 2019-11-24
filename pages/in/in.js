@@ -40,10 +40,27 @@ doctor:function(){
   })
 },
   user: function () {
-    wx.redirectTo({
-      url: '../uzhuce/uzhuce',
+    const nowcode = app.globalData.code;
+    console.log("incode: " + nowcode);
+    var urlpage = null;
+    //从服务器获取病人数据，判断病人是否已经注册
+    wx.request({
+      url: 'http://47.100.248.211:7230/aiya/user/get',
+      data: nowcode,
+      method: 'get',
+      dataType: 'json',
+      success: function (res) {
+        console.log(res);
+        if (res.data.data == null) {
+          urlpage = '../uzhuce/uzhuce';
+        } else {
+          urlpage = '../Ucenter/Ucenter';
+        }
+        wx.redirectTo({
+          url: urlpage,
+        })
+      }
     })
-
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

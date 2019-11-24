@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
 
   /**
@@ -151,24 +152,25 @@ Page({
     if (e.detail.value.userName == '') {
       wx.showToast({
         title: '用户名不能为空',
-        image: 'none',
+        icon: 'loading',
         duration: 2000
       })
     } else if (e.detail.value.userAge == '') {
       wx.showToast({
         title: '年龄不能为空',
-        image: 'none',
+        icon: 'loading',
         duration: 2000
       })
     }else if (e.detail.value.userPhone == '') {
       wx.showToast({
         title: '手机号码不能为空',
-        image: 'none',
+        icon: 'loading',
         duration: 2000
       })
     }else {
       console.log(e.detail.value);
       var user = e.detail.value;
+      user.userOpenid = app.globalData.code;
       console.log(user);
       wx.request({
         url: 'http://47.100.248.211:7230/aiya/user/save',

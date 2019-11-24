@@ -30,14 +30,15 @@ Page({
       text: '消息通知',
       path: 'message'
     }],
-
-
+    // 医生id
+    doctorId:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
     wx.getSetting({
       success(res) {
         if (res.authSetting['scope.userInfo']) {
@@ -47,38 +48,58 @@ Page({
           })
         }
       }
+    }),
+    console.log("Dmy:dCode: ");
+    const nowcode = app.globalData.code;
+    console.log("incode: " + nowcode);
+    var urlpage = null;
+    //从服务器获取医生数据，获取医生的id
+    wx.request({
+      url: 'http://47.100.248.211:7230/aiya/doctor/get',
+      data: nowcode,
+      method: 'get',
+      dataType: 'json',
+      success: function (res) {
+        console.log(res);
+        that.setData({
+          // 先这么写，后面会修改id的名称
+          // doctorId:res.data.dId
+          doctorId:2
+        })
+
+      }
     })
 
   },
-  onShow: function () {
-    var that = this
-    wx.request({
-      url: app.globalData.URL + "/user/interface",
-      method: 'POST',
-      header: {
-        'content-type': "application/x-www-form-urlencoded"
-      },
-      data: {
-        openid: app.globalData.openid,
-      },
-      success: function (res) {
-        that.setData({
-          user_job_publish_numb: res.data.user_job_publish_numb,
-          user_job_receive_numb: res.data.user_job_receive_numb,
-          user_job_complete_numb: res.data.user_job_complete_numb,
-          avatarUrl: res.data.user_avatarUrl,
-          nickName: res.data.user_name,
-          user_account_numb: res.data.user_account_numb,
-          user_message_numb: res.data.user_message_numb,
-        })
-      },
-      /*fail: function(res) {
-        wx.navigateTo({
-          url: '../../pages/error/error'
-        })
-      },*/
-    })
-  },
+  // onShow: function () {
+  //   var that = this
+  //   wx.request({
+  //     url: app.globalData.URL + "/user/interface",
+  //     method: 'POST',
+  //     header: {
+  //       'content-type': "application/x-www-form-urlencoded"
+  //     },
+  //     data: {
+  //       openid: app.globalData.openid,
+  //     },
+  //     success: function (res) {
+  //       that.setData({
+  //         user_job_publish_numb: res.data.user_job_publish_numb,
+  //         user_job_receive_numb: res.data.user_job_receive_numb,
+  //         user_job_complete_numb: res.data.user_job_complete_numb,
+  //         avatarUrl: res.data.user_avatarUrl,
+  //         nickName: res.data.user_name,
+  //         user_account_numb: res.data.user_account_numb,
+  //         user_message_numb: res.data.user_message_numb,
+  //       })
+  //     },
+  //     /*fail: function(res) {
+  //       wx.navigateTo({
+  //         url: '../../pages/error/error'
+  //       })
+  //     },*/
+  //   })
+  // },
 
 
   jump: function (e) {
@@ -86,10 +107,10 @@ Page({
     var urldata = '../../pages/out/out'
     console.log(type)
     if(type=="post"){
-      var urldata ='../../pages/out/out'
+      var urldata ='../../pages/out/out?docId='+this.data.doctorId
     }
     else if(type=="continue"){
-      var urldata='../../pages/Areadyout/Areadyout'
+      var urldata = '../../pages/Areadyout/Areadyout?docId=' + this.data.doctorId
     }
     else if(type=="complete"){
       var urldata = '../../pages/Complete/Complete'

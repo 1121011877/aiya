@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/detail/detail",
+    
     "pages/come/come",
     "pages/welcome/welcome",
     "pages/TakePhotos/TakePhotos",
@@ -13,7 +13,7 @@
     "pages/dzhuce/dzhuce",
     "pages/uzhuce/uzhuce",
     "pages/Areadyout/Areadyout",
-    
+    "pages/detail/detail",
     "pages/Mytest/Mytest",
     "pages/Ucenter/Ucenter",
     "pages/message/message"

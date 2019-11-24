@@ -2,6 +2,8 @@
 
 <camera mode="normal" device-position="front" flash="auto" binderror="error" class='camera' hidden='{{hiddenC}}'>
 </camera>
+<image src='../../images/person.png' class="person"></image>
+<view class="tips" hidden='{{hiddenC}}'>张大嘴，正视屏幕</view>
 <button type="primary" bindtap="start" class='bu' hidden='{{hiddenC}}'>拍照</button>
 <button type="primary" bindtap="back"  class='bu' hidden='{{hiddenC}}'>查看示例图片</button>
 

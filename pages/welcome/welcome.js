@@ -7,7 +7,16 @@ Page({
     list: [0,0,0,0,1,0,0,0,0],
     imagepath:'',
     hidden: true,
-
+    // jobid
+    jobid:null
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.setData({
+      jobid: options.jobid
+    })
   },
   takePhoto() {
     this.setData({
@@ -53,8 +62,9 @@ Page({
     })
   },
   next: function () {
+    var that = this;
     wx.redirectTo({
-      url: '../TakePhotos/TakePhotos',
+      url: '../TakePhotos/TakePhotos?jobid='+that.data.jobid,
     })
   }
 })

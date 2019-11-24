@@ -8,8 +8,17 @@ Page({
     list: [0, 0, 0, 0, 1, 0, 0, 0, 0],
     imagepath: '',
     hidden: true,
-    hiddenC: false
-
+    hiddenC: false,
+    // jobid
+    jobid:null
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.setData({
+      jobid: options.jobid
+    })
   },
   takePhoto() {
     this.setData({
@@ -46,11 +55,18 @@ Page({
     var date = Date();
     var that=this;
     wx.uploadFile({
-      url: 'https://www.fourmbkf.xyz/photo/fileUpload?openid=' + app.globalData.openId,
+      //url: 'https://www.fourmbkf.xyz/photo/fileUpload?openid=' + app.globalData.code,
+      url: 'http://47.100.248.211:7230/photo/fileUpload',
       filePath: app.globalData.img,
       name: 'file',
+      data:{
+        jobid:that.data.jobid,
+        openid: app.globalData.code,
+        pid:1,
+        type:1,
+      },
       success(res) {
-        console.log(app.globalData.openId);
+        console.log(res);
       }
     }),
       wx.navigateBack({
@@ -68,8 +84,9 @@ Page({
     })
   },
   next: function () {
+    var that = this;
     wx.redirectTo({
-      url: '../TakePhotos/TakePhotos'
+      url: '../TakePhotos/TakePhotos?jobid='+that.data.jobid
     })
   },
   back: function () {
