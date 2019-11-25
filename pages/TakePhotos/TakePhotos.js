@@ -56,15 +56,23 @@ Page({
     var that=this;
     wx.uploadFile({
       //url: 'https://www.fourmbkf.xyz/photo/fileUpload?openid=' + app.globalData.code,
-      url: 'http://47.100.248.211:7230/photo/fileUpload',
+     // url: 'http://47.100.248.211:7230/photo/fileUpload',
+      url: 'http://localhost:7230/photo/fileUpload',
       filePath: app.globalData.img,
       name: 'file',
-      data:{
-        jobid:that.data.jobid,
+      formData: {
+        // x: JSON.stringify(e.detail.value)
+        jobid: that.data.jobid,
         openid: app.globalData.code,
-        pid:1,
-        type:1,
+        pid: 1,
+        type: 1,
       },
+      // data:{
+      //   jobid:that.data.jobid,
+      //   openid: app.globalData.code,
+      //   pid:1,
+      //   type:1,
+      // },
       success(res) {
         console.log(res);
       }

@@ -49,26 +49,30 @@ Page({
         }
       }
     }),
-    console.log("Dmy:dCode: ");
-    const nowcode = app.globalData.code;
-    console.log("incode: " + nowcode);
-    var urlpage = null;
-    //从服务器获取医生数据，获取医生的id
-    wx.request({
-      url: 'http://47.100.248.211:7230/aiya/doctor/get',
-      data: nowcode,
-      method: 'get',
-      dataType: 'json',
-      success: function (res) {
-        console.log(res);
-        that.setData({
-          // 先这么写，后面会修改id的名称
-          // doctorId:res.data.dId
-          doctorId:2
-        })
-
-      }
+    that.setData({
+      doctorId:options.doctorId
     })
+    //console.log("Dmy:dCode: ");
+    // const code = app.globalData.code;
+    // console.log("incode: " + code);
+    // var urlpage = null;
+    // //从服务器获取医生数据，获取医生的id
+    // wx.request({
+    //   //url: 'http://47.100.248.211:7230/aiya/doctor/getDoctorByOpenid',
+    //   url: 'http://localhost:7230/aiya/doctor/getDoctorByOpenid',
+    //   data: {code},
+    //   method: 'get',
+    //   dataType: 'json',
+    //   success: function (res) {
+    //     console.log(res);
+    //     that.setData({
+    //       // 先这么写，后面会修改id的名称
+    //       doctorId:res.data.data.dId
+    //       //doctorId:2
+    //     })
+
+     // }
+   // })
 
   },
   // onShow: function () {

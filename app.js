@@ -37,6 +37,10 @@ App({
   },
   globalData: {
     userInfo: null,
-    code: null
+    code: null,
+    //doctor id
+    doctorId:null,
+    //user id
+    userId:null
   }
 })

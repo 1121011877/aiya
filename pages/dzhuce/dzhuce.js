@@ -21,9 +21,9 @@ Page({
   */
   onLoad: function (options) {
     var that = this;
-    that.setData({
-      dCode: options.dCode,
-    })
+    // that.setData({
+    //   dCode: options.dCode,
+    // })
   },
   onUnload: function () {
     wx.navigateTo({
@@ -197,22 +197,20 @@ Page({
       })
     }else{
       var doctor=e.detail.value;
-      var code = app.globalData.code;
+      doctor.code = app.globalData.code;
       console.log(doctor);
-      console.log("dCode: "+code);
+      console.log("dCode: "+doctor.code);
       wx.request({
-        url: 'http://47.100.248.211:7230/aiya/doctor/save',
+        url: 'http://localhost:7230/aiya/doctor/save',
+
         header: {
           "Content-Type": "application/json"
         },
         method: "POST",
-        data: {
-          doctor,
-          code
-          },
+        data:doctor,
         success: function(res){
           console.log(res.data);
-          if(res.data.code == 0){
+          if(res.data.code != 0){
             wx.showToast({
               title: '提交失败！',
               icon: 'loading',
@@ -226,7 +224,7 @@ Page({
             }),
             //跳转到医生个人中心
             wx.redirectTo({
-              url: '../Dmy/Dmy',
+              url: '../Dmy/Dmy?doctorId='+res.data.data.dId,
             })
           }
         }

@@ -105,23 +105,27 @@ Page({
     var title = e.detail.value.jobTitle;
     var describe = e.detail.value.jodDescribe;
     var type = e.detail.value.jobType;
-    var id = this.data.doctorId;
+    var id =2;
     var file = "../../img/open.png";
+    console.log(describe,title,id,type);
+    console.log("lalalal");
     // job.jobId = 123;
     // job.jobImgid = "1";
     // job.jobImgpath = "../../img/open.png";
     wx.request({
-      url: 'http://47.100.248.211:7230/aiya/job/save',
+      //url: 'http://47.100.248.211:7230/aiya/job/save',
+      url: 'http://localhost:7230/aiya/job/save',
       method: 'POST',
+      // filePath: "../../img/open.png",
+      // name: 'file',
       header: {
-        'content-type': 'application/json'
+        'content-type': 'application/x-www-form-urlencoded'
       },
       data: {
-        describe,
-        file,
-        title,
-        id,
-        type
+        describe: e.detail.value.jodDescribe,
+        title: e.detail.value.jodDescribe,
+        id:2,
+        type: e.detail.value.jobType
       },
       success: function (res) {
         console.log(res);

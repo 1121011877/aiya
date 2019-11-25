@@ -170,11 +170,11 @@ Page({
     }else {
       console.log(e.detail.value);
       var user = e.detail.value;
-      user.userOpenid = app.globalData.code;
+      user.code = app.globalData.code;
       console.log(user);
       wx.request({
-        url: 'http://47.100.248.211:7230/aiya/user/save',
-        //url: 'http://localhost:7230/aiya/user/save',
+        //url: 'http://47.100.248.211:7230/aiya/user/save',
+        url: 'http://localhost:7230/aiya/user/save',
         method: "POST",
         data:user,
         header: {

@@ -17,13 +17,15 @@ Page({
 
   },
 doctor:function(){
-  const nowcode = app.globalData.code;
-  console.log("incode: " + nowcode);
+  const code = app.globalData.code;
+  console.log("incode: " + code);
   var urlpage = null;
   //从服务器获取医生数据，判断医生是否已经注册
   wx.request({
-    url: 'http://47.100.248.211:7230/aiya/doctor/get',
-    data: nowcode,
+
+    //url: 'http://47.100.248.211:7230/aiya/doctor/get',
+    url: 'http://localhost:7230/aiya/doctor/getDoctorByOpenid',
+    data: {code},
     method: 'get',
     dataType: 'json',
     success: function (res) {
@@ -31,7 +33,7 @@ doctor:function(){
       if(res.data.data == null){
         urlpage = '../dzhuce/dzhuce';
       }else{
-        urlpage = '../Dmy/Dmy';
+        urlpage = '../Dmy/Dmy?doctorId=' + res.data.data.dId;
       }
       wx.redirectTo({
         url: urlpage,
@@ -40,13 +42,14 @@ doctor:function(){
   })
 },
   user: function () {
-    const nowcode = app.globalData.code;
-    console.log("incode: " + nowcode);
+    const code = app.globalData.code;
+    console.log("incode: " + code);
     var urlpage = null;
     //从服务器获取病人数据，判断病人是否已经注册
     wx.request({
-      url: 'http://47.100.248.211:7230/aiya/user/get',
-      data: nowcode,
+      //url: 'http://47.100.248.211:7230/aiya/user/get',
+      url: 'http://localhost:7230/aiya/user/get',
+      data: {code},
       method: 'get',
       dataType: 'json',
       success: function (res) {

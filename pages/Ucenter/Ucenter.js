@@ -49,21 +49,21 @@ Page({
       }
     }),
     console.log("");
-    const nowcode = app.globalData.code;
-    console.log("incode: " + nowcode);
+    const code = app.globalData.code;
+    console.log("incode: " + code);
     var that = this;
     //从服务器获取病人数据，获取病人的id
     wx.request({
       url: 'http://47.100.248.211:7230/aiya/user/get',
-      data: nowcode,
+      data: {code},
       method: 'get',
       dataType: 'json',
       success: function (res) {
         console.log(res);
         that.setData({
           // 先这么写，后面会修改id的名称
-          // userId:res.data.userId
-          userId: 2
+          userId:res.data.data.userId
+          //userId: 2
         })
       }
     })

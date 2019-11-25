@@ -20,7 +20,8 @@ Page({
       userid:options.userid
     })
     console.log("userid: "+this.data.userid);
-    var code = this.data.userid;
+    //var code = this.data.userid;
+    var code = 2;
     var that = this;
     wx.request({
       url: 'http://47.100.248.211:7230/aiya/user/getUserJobList',
