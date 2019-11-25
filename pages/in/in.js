@@ -24,7 +24,7 @@ doctor:function(){
   wx.request({
 
     //url: 'http://47.100.248.211:7230/aiya/doctor/get',
-    url: 'http://localhost:7230/aiya/doctor/getDoctorByOpenid',
+    url: app.globalData.localpath+'/aiya/doctor/getDoctorByOpenid',
     data: {code},
     method: 'get',
     dataType: 'json',
@@ -48,7 +48,7 @@ doctor:function(){
     //从服务器获取病人数据，判断病人是否已经注册
     wx.request({
       //url: 'http://47.100.248.211:7230/aiya/user/get',
-      url: 'http://localhost:7230/aiya/user/get',
+      url: app.globalData.localpath +'/aiya/user/get',
       data: {code},
       method: 'get',
       dataType: 'json',

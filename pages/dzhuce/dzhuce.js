@@ -201,7 +201,7 @@ Page({
       console.log(doctor);
       console.log("dCode: "+doctor.code);
       wx.request({
-        url: 'http://localhost:7230/aiya/doctor/save',
+        url: app.globalData.localpath +'/aiya/doctor/save',
 
         header: {
           "Content-Type": "application/json"

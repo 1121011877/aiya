@@ -1,4 +1,5 @@
 // pages/detail/detail.js
+var app = getApp()
 Page({
 
   /**
@@ -18,7 +19,7 @@ Page({
   showUser: function () {
     var that = this;
     wx.request({
-      url: 'http://47.100.248.211:7230/aiya/respect',
+      url: app.globalData.localpath +'/aiya/respect',
       method: 'get',
       header: {
         'content-type': 'application/json'
@@ -60,7 +61,7 @@ Page({
     // phone_number=123;
     console.log("phone: "+phone_number);
     wx.request({
-      url: 'http://47.100.248.211:7230/aiya/user',
+      url: app.globalData.localpath +'/aiya/user',
       method: 'get',
       data: {phone_number},
       header:{
@@ -95,7 +96,7 @@ Page({
       isadd:true
     }),
     wx.request({
-      url: 'http://47.100.248.211:7230/aiya/respect',
+      url: app.globalData.localpath +'/aiya/respect',
       method: 'post',
       header: {
         'content-type': 'application/json'

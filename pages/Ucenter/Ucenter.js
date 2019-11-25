@@ -54,7 +54,7 @@ Page({
     var that = this;
     //从服务器获取病人数据，获取病人的id
     wx.request({
-      url: 'http://47.100.248.211:7230/aiya/user/get',
+      url: app.globalData.localpath +'/aiya/user/get',
       data: {code},
       method: 'get',
       dataType: 'json',

@@ -57,7 +57,7 @@ Page({
     wx.uploadFile({
       //url: 'https://www.fourmbkf.xyz/photo/fileUpload?openid=' + app.globalData.code,
      // url: 'http://47.100.248.211:7230/photo/fileUpload',
-      url: 'http://localhost:7230/photo/fileUpload',
+      url: app.globalData.localpath +'/photo/fileUpload',
       filePath: app.globalData.img,
       name: 'file',
       formData: {

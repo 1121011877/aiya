@@ -1,4 +1,5 @@
 // pages/Areadyout/Areadyout.js
+var app = getApp()
 Page({
 
   /**
@@ -24,7 +25,7 @@ Page({
     var that = this;
     // 发起请求获取did对应的job
     wx.request({
-      url: 'http://47.100.248.211:7230/aiya/job/get',
+      url: app.globalData.localpath +'/aiya/job/get',
       method:'post',
       data:{
         dId

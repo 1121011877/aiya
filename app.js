@@ -38,6 +38,7 @@ App({
   globalData: {
     userInfo: null,
     code: null,
+    localpath:"http://47.100.248.211:7230",
     //doctor id
     doctorId:null,
     //user id

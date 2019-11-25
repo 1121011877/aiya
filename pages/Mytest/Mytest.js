@@ -1,4 +1,5 @@
 // pages/Mytest/Mytest.js
+var app = getApp()
 Page({
 
   /**
@@ -24,7 +25,7 @@ Page({
     var code = 2;
     var that = this;
     wx.request({
-      url: 'http://47.100.248.211:7230/aiya/user/getUserJobList',
+      url: app.globalData.localpath+'/aiya/user/getUserJobList',
       method: 'get',
       header: {
         'content-type': 'application/json'

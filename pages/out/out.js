@@ -114,7 +114,7 @@ Page({
     // job.jobImgpath = "../../img/open.png";
     wx.request({
       //url: 'http://47.100.248.211:7230/aiya/job/save',
-      url: 'http://localhost:7230/aiya/job/save',
+      url: app.globalData.localpath +'/aiya/job/save',
       method: 'POST',
       // filePath: "../../img/open.png",
       // name: 'file',
