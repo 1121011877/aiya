@@ -31,7 +31,7 @@ Page({
       path: 'message'
     }],
     // userid
-    userId:null
+    //userId:null
   },
 
   /**
@@ -47,26 +47,26 @@ Page({
           })
         }
       }
-    }),
-    console.log("");
-    const code = app.globalData.code;
-    console.log("incode: " + code);
-    var that = this;
-    //从服务器获取病人数据，获取病人的id
-    wx.request({
-      url: app.globalData.localpath +'/aiya/user/get',
-      data: {code},
-      method: 'get',
-      dataType: 'json',
-      success: function (res) {
-        console.log(res);
-        that.setData({
-          // 先这么写，后面会修改id的名称
-          userId:res.data.data.userId
-          //userId: 2
-        })
-      }
     })
+    // console.log("");
+    // const code = app.globalData.code;
+    // console.log("incode: " + code);
+    // var that = this;
+    // //从服务器获取病人数据，获取病人的id
+    // wx.request({
+    //   url: app.globalData.localpath +'/aiya/user/get',
+    //   data: {code},
+    //   method: 'get',
+    //   dataType: 'json',
+    //   success: function (res) {
+    //     console.log(res);
+    //     that.setData({
+    //       // 先这么写，后面会修改id的名称
+    //       userId:res.data.data.userId
+    //       //userId: 2
+    //     })
+    //   }
+    // })
 
   },
   onShow: function () {
@@ -108,7 +108,7 @@ Page({
       var urldata ='../../pages/out/out'
     }
     else if(type=="continue"){
-      var urldata ='../../pages/Mytest/Mytest?userid='+this.data.userId
+      var urldata ='../../pages/Mytest/Mytest'
     }
     else if(type=="complete"){
       var urldata = '../../pages/Complete/Complete'

@@ -8,7 +8,7 @@ Page({
   data: {
     ready:false,
     // userid
-    userid:null,
+    //userid:null,
     // userjob列表
     userjob:null
   },
@@ -17,12 +17,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      userid:options.userid
-    })
-    console.log("userid: "+this.data.userid);
+    // this.setData({
+    //   userid:options.userid
+    // })
+    //console.log("userid: "+this.data.userid);
     //var code = this.data.userid;
-    var code = 2;
+    var code = app.globalData.userId;
     var that = this;
     wx.request({
       url: app.globalData.localpath+'/aiya/user/getUserJobList',

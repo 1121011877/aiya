@@ -23,7 +23,7 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
-
+              console.log("userInfo: " ,this.globalData.userInfo);
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
@@ -38,10 +38,13 @@ App({
   globalData: {
     userInfo: null,
     code: null,
-    localpath:"http://47.100.248.211:7230",
+    //localpath:"http://47.100.248.211:7230",
+    localpath: "http://localhost:7230",
     //doctor id
     doctorId:null,
     //user id
-    userId:null
+    userId:null,
+    //openid
+    openid:null
   }
 })

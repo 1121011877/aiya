@@ -64,7 +64,7 @@ Page({
                 //3.请求自己的服务器，解密用户信息 获取unionId等加密信息
                 wx.request({
                   // url: 'http://47.100.248.211:8080/Test_OpenId/getopenid',//自己的服务接口地址
-                  url: 'https://www.fourmbkf.xyz/Test_OpenId/getopenid',//自己的服务接口地址
+                  url: app.globalData.localpath+'/Test_OpenId/getopenid',//自己的服务接口地址
                   method: 'get',
                   header: {
                     "Content-Type": "applciation/json"

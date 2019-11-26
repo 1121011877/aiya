@@ -7,7 +7,7 @@ Page({
    */
   data: {
     // 从Dmy传过来的did
-    doctorId:null,
+    //doctorId:null,
     // 获取到的job列表
     arrJob:[]
   },
@@ -17,11 +17,11 @@ Page({
    */
   onLoad: function (options) {
     // 获取从Dmy传过来的dId
-    this.setData({
-      doctorId: options.docId
-    })
-    console.log("out:doctorId: " + this.data.doctorId);
-    var dId = this.data.doctorId;
+    // this.setData({
+    //   doctorId: options.docId
+    // })
+   // console.log("out:doctorId: " + this.data.doctorId);
+    var dId = app.globalData.doctorId;
     var that = this;
     // 发起请求获取did对应的job
     wx.request({

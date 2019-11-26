@@ -6,11 +6,12 @@
     <!--未完成的红标-->
     <view class="no" hidden="{{ready}}"></view>
     <!--内容-->
-    <view class="title">下颚恢复训练
+    <view class="title">{{item.jobTitle}}
       <!--起止时间-->
-      <view class="time">2019/8/1———2019/9/10</view>
+      <view class="time">{{item.createTime}}</view>
       <!--每日次数-->
-      <view class="number">每日训练次数：<text>3</text></view>
+      <!-- <view class="number">每日训练次数：<text>3</text></view> -->
+      <view class="number">{{item.jodDescrib}}</view>
     </view>
   </view>
 </view>

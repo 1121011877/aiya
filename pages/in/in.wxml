@@ -1,7 +1,7 @@
 <!--miniprogram/pages/in/in.wxml-->
 
 <view class="in">
-<swiper class="swiper_box" indicator-dots="true" autoplay="true" current="{{ current }}" interval="5000" duration="{{ duration }}" circular="{{ circular }}" bindchange="swiperchange">
+<swiper class="swiper_box" indicator-dots="true" autoplay="true" current="{{ current }}" interval="5000" duration="{{ duration }}" circular="{{ circular }}" >
     <block  >
       <swiper-item class="picture">
        <image src="../../img/1.jpg" class="slide-image" />

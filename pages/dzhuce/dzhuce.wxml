@@ -24,7 +24,7 @@
         <!-- 验证码 -->
         <view class='row'>
           <view class='info'>
-            <input  class= 'info-input' placeholder-class="plah" bindinput="handleVerificationCode" placeholder="请输入你的验证码" />
+            <input  class= 'info-input' placeholder-class="plah" bindinput="handleVerificationCode" placeholder="请输入你的验证码" name="doctorVerification"/>
           </view>
         </view>
         <!-- 邮箱 -->

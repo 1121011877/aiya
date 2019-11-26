@@ -30,8 +30,8 @@ Page({
       text: '消息通知',
       path: 'message'
     }],
-    // 医生id
-    doctorId:null
+    // // 医生id
+    // doctorId:null
   },
 
   /**
@@ -48,10 +48,10 @@ Page({
           })
         }
       }
-    }),
-    that.setData({
-      doctorId:options.doctorId
     })
+    // that.setData({
+    //   doctorId:options.doctorId
+    // })
     //console.log("Dmy:dCode: ");
     // const code = app.globalData.code;
     // console.log("incode: " + code);
@@ -111,10 +111,10 @@ Page({
     var urldata = '../../pages/out/out'
     console.log(type)
     if(type=="post"){
-      var urldata ='../../pages/out/out?docId='+this.data.doctorId
+      var urldata ='../../pages/out/out'
     }
     else if(type=="continue"){
-      var urldata = '../../pages/Areadyout/Areadyout?docId=' + this.data.doctorId
+      var urldata = '../../pages/Areadyout/Areadyout'
     }
     else if(type=="complete"){
       var urldata = '../../pages/Complete/Complete'
