@@ -5,32 +5,46 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   onLoad: function () {
-    wx.getSetting({
-      success(res) {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
-          wx.getUserInfo({
-            success(res) { }
-          })
-        }
-      },
-      fail: function (res) {
-        wx.navigateTo({
-          url: '../../pages/error/error'
-        })
-      },
+    wx.login({
+      success: res => {
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log("code: " + res.code);
+        app.globalData.code = res.code;
+        
+      }
     })
+    // wx.getSetting({
+    //   success(res) {
+    //     if (res.authSetting['scope.userInfo']) {
+    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+    //       wx.getUserInfo({
+    //         success(res) { }
+    //       })
+    //     }
+    //   },
+    //   fail: function (res) {
+    //     wx.navigateTo({
+    //       url: '../pages/error/error'
+    //     })
+    //   },
+    // })
   },
   bindGetUserInfo: function (e) {
     var js_code
     if (e.detail.userInfo) {
       //用户按了允许授权按钮
-      wx.getUserInfo({
-        success(res) {
-          var nickname = res.userInfo.nickName
-          var avatarUrl = res.userInfo.avatarUrl
-        }
+      // wx.getUserInfo({
+      //   success(res) {
+      //var nickname = res.userInfo.nickName
+      //var avatarUrl = res.userInfo.avatarUrl
+      var nickname = e.detail.userInfo.nickName
+      var avatarUrl = e.detail.userInfo.avatarUrl
+      wx.redirectTo({
+        url: '../in/in',
       })
+      //   }
+      // })
+      /*
       wx.login({
        /* success: function (res) {
           wx.request({
@@ -53,7 +67,7 @@ Page({
             }
           })
         }*/
-        success (res) {
+        /*success (res) {
           var code = res.code;//登录凭证
           console.log(res.code);
           if (code) {
@@ -79,7 +93,7 @@ Page({
 
                   success: function (data) {
                       console.log(data); 
-                      app.globalData.openId=data.data.openid;
+                      app.globalData.openid=data.data.openid;
                     console.log(app.globalData.openId); 
 
                       
@@ -103,10 +117,8 @@ Page({
         }
 
 
-      })
-      wx.redirectTo({
-        url: '../in/in',
-      })
+      })*/
+      
     } else {
       //用户按了拒绝按钮
       wx.showModal({
@@ -121,7 +133,7 @@ Page({
         },
         fail: function (res) {
           wx.navigateTo({
-            url: '../../pages/error/error'
+            url: '../pages/error/error'
           })
         },
       })

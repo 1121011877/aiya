@@ -39,31 +39,31 @@ Page({
       })
 
     },
-  return_home: function (e) {
-    wx.navigateTo({
-      url: '/pages/login/login',
-    })
+  // return_home: function (e) {
+  //   wx.navigateTo({
+  //     url: '/pages/login/login',
+  //   })
 
-  },
-  handleInputPhone: function (e) {
-    this.setData({
-      phone: e.detail.value
-    })
+  // },
+   handleInputPhone: function (e) {
+     this.setData({
+       phone: e.detail.value
+     })
   },
   handleVerificationCode: function (e) {
-    console.log(e);
+   // console.log(e);
     this.setData({
       Code: e.detail.value
     })
   },
   handleNewChanges: function (e) {
-    console.log(e);
+    //console.log(e);
     this.setData({
       NewChanges: e.detail.value
     })
   },
   handleNewChangesAgain: function (e) {
-    console.log(e);
+   // console.log(e);
     this.setData({
       NewChangesAgain: e.detail.value
     })
@@ -199,10 +199,9 @@ Page({
       var doctor=e.detail.value;
       doctor.dOpenid = app.globalData.openid;
       console.log(doctor);
-      console.log("dCode: "+doctor.code);
+      console.log("dOpenid: "+doctor.dOpenid);
       wx.request({
         url: app.globalData.localpath +'/aiya/doctor/save',
-
         header: {
           "Content-Type": "application/json"
         },
@@ -210,7 +209,6 @@ Page({
         data:doctor,
         success: function(res){
           console.log(res.data);
-          
           if(res.data.code == 2){
             wx.showToast({
               title: res.data.msg,

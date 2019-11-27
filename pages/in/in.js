@@ -14,42 +14,65 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getopenid()
-  },
-  getopenid:function(){
+    //this.getopenid()
     const code = app.globalData.code;
-    console.log("getopenid: "+code);
+    console.log("getopenid: " + code);
     wx.request({
-      url: app.globalData.localpath+'/Test_OpenId/getopenid',
+      url: app.globalData.localpath + '/Test_OpenId/getopenid',
       method: 'GET',
       // header:{
       //   'content-type': "application/x-www-form-urlencoded"
       // },
-      data:{
+      data: {
         code
       },
-      success:function(res){
+      success: function (res) {
         console.log(res);
-        app.globalData.openid = res.data
-        console.log("openid: " + app.globalData.openid);
+        if(res.data == null || res.data == ""){
+          wx.showToast({
+            title: '登陆失败，请重新登录',
+            icon: 'loading',
+            duration: 1500
+          })
+        }else{
+          app.globalData.openid = res.data
+          console.log("openid: " + app.globalData.openid);
+        }
       }
     })
   },
+  // getopenid:function(){
+  //   const code = app.globalData.code;
+  //   console.log("getopenid: "+code);
+  //   wx.request({
+  //     url: app.globalData.localpath+'/Test_OpenId/getopenid',
+  //     method: 'GET',
+  //     // header:{
+  //     //   'content-type': "application/x-www-form-urlencoded"
+  //     // },
+  //     data:{
+  //       code
+  //     },
+  //     success:function(res){
+  //       console.log(res);
+  //       app.globalData.openid = res.data
+  //       console.log("openid: " + app.globalData.openid);
+  //     }
+  //   })
+  // },
 doctor:function(){
   const code = app.globalData.openid;
   //console.log("incode: " + code);
   var urlpage = null;
   //从服务器获取医生数据，判断医生是否已经注册
   wx.request({
-
-    //url: 'http://47.100.248.211:7230/aiya/doctor/get',
     url: app.globalData.localpath+'/aiya/doctor/getDoctorByOpenid',
     data: {code},
     method: 'get',
     dataType: 'json',
     success: function (res) {
       console.log(res);
-      if(res.data.data == null){
+      if(res.data.data == null || res.data.data == ""){
         urlpage = '../dzhuce/dzhuce';
       }else{
         urlpage = '../Dmy/Dmy';
@@ -62,7 +85,6 @@ doctor:function(){
   })
 },
   user: function () {
-    this.getopenid
     const code = app.globalData.openid;
     console.log("incode: " + code);
     var urlpage = null;

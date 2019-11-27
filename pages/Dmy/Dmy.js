@@ -42,70 +42,14 @@ Page({
     wx.getSetting({
       success(res) {
         if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success(res) { }
           })
         }
       }
     })
-    // that.setData({
-    //   doctorId:options.doctorId
-    // })
-    //console.log("Dmy:dCode: ");
-    // const code = app.globalData.code;
-    // console.log("incode: " + code);
-    // var urlpage = null;
-    // //从服务器获取医生数据，获取医生的id
-    // wx.request({
-    //   //url: 'http://47.100.248.211:7230/aiya/doctor/getDoctorByOpenid',
-    //   url: 'http://localhost:7230/aiya/doctor/getDoctorByOpenid',
-    //   data: {code},
-    //   method: 'get',
-    //   dataType: 'json',
-    //   success: function (res) {
-    //     console.log(res);
-    //     that.setData({
-    //       // 先这么写，后面会修改id的名称
-    //       doctorId:res.data.data.dId
-    //       //doctorId:2
-    //     })
-
-     // }
-   // })
-
   },
-  // onShow: function () {
-  //   var that = this
-  //   wx.request({
-  //     url: app.globalData.URL + "/user/interface",
-  //     method: 'POST',
-  //     header: {
-  //       'content-type': "application/x-www-form-urlencoded"
-  //     },
-  //     data: {
-  //       openid: app.globalData.openid,
-  //     },
-  //     success: function (res) {
-  //       that.setData({
-  //         user_job_publish_numb: res.data.user_job_publish_numb,
-  //         user_job_receive_numb: res.data.user_job_receive_numb,
-  //         user_job_complete_numb: res.data.user_job_complete_numb,
-  //         avatarUrl: res.data.user_avatarUrl,
-  //         nickName: res.data.user_name,
-  //         user_account_numb: res.data.user_account_numb,
-  //         user_message_numb: res.data.user_message_numb,
-  //       })
-  //     },
-  //     /*fail: function(res) {
-  //       wx.navigateTo({
-  //         url: '../../pages/error/error'
-  //       })
-  //     },*/
-  //   })
-  // },
-
-
   jump: function (e) {
     var type = e.currentTarget.dataset.text
     var urldata = '../../pages/out/out'
