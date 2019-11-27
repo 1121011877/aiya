@@ -39,7 +39,9 @@ App({
     userInfo: null,
     code: null,
     //localpath:"http://47.100.248.211:7230",
-    localpath: "http://localhost:7230",
+    //localpath: "http://localhost:7230",
+    localpath: "https://www.fourmbkf.xyz:80",
+    
     //doctor id
     doctorId:null,
     //user id

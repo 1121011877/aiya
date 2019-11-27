@@ -119,8 +119,8 @@ Page({
       },
       data: {
         describe: e.detail.value.jodDescribe,
-        title: e.detail.value.jodDescribe,
-        id: app.globalData.doctorId,
+        title: e.detail.value.jobTitle,
+        id: app.globalData.doctorId-0,
         type: e.detail.value.jobType
       },
       success: function (res) {
