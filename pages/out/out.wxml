@@ -3,10 +3,10 @@
     <view class="weui-cells">
       <view class="weui-cell weui-cell_input">
         <view class="weui-cell_hd">
-          <view class="weui-label">标题</view>
+          <view class="weui-label">病种名称</view>
         </view>
         <view class="weui-cell_bd">
-          <input placeholder="请输入任务标题" name="jobTitle" value='{{form_info}}' />
+          <input placeholder="请输入病种名称" name="jobTitle" value='{{form_info}}' />
         </view>
       </view>
     </view>
@@ -16,7 +16,7 @@
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell">
         <view class="weui-cell__bd">
-          <textarea class="weui-textarea" placeholder="请输入任务要求" style="height: 3.3em" name="jodDescribe" value='{{form_info}}' />
+          <textarea class="weui-textarea" placeholder="请输入随份医嘱" style="height: 3.3em" name="jodDescribe" value='{{form_info}}' />
         </view>
       </view>
     </view>
@@ -26,12 +26,12 @@
     <view class="weui-cells">
       <view style='display:flex; justify-content: center;margin-top:20rpx;'>
         <radio-group name="jobType" bindchange="job_type_choose" style="margin-top:20rpx;">
-          <radio value="下颚图片采集" >下颌图片采集</radio>
+          <radio value="下颚骨运动功能恢复训练" >下颚骨运动功能恢复训练</radio>
           <!-- <radio value="word">关节图片采集</radio> -->
         </radio-group>
       </view>
       <view class="SL">
-        <view>图片示例：</view>
+        <view>训练示例：</view>
         <image src="../../img/open.png"></image>
         </view>
       <view>
@@ -57,25 +57,10 @@
           <view class="weui-label">每日训练次数</view>
         </view>
         <view class="weui-cell__bd">
-          <input placeholder="请输入每日训练次数（个人）" name="jobFrequency" value='{{form_info}}' />
+          <!-- <input placeholder="请输入每日训练次数（个人）" name="jobFrequency" value='{{form_info}}' /> -->
+          <view>每天5次，每次20分钟</view>
         </view>
       </view>
-
-
-      <!-- <view class="weui-cell weui-cell_input">
-        <view class="weui-cell__hd">
-          <view class="weui-label">任务校验码</view>
-        </view>
-        <view class="weui-cell__bd">
-          <input placeholder="任务接收人手机号" name="numb" value='{{form_info}}' />
-        </view>
-      </view> -->
-
-    <!--</view>-->
-
-
-
-
 
     <view class="button-sp-area">
       <button class="weui-btn" type="primary" formType='submit'>发布任务</button>

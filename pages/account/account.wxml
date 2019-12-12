@@ -1,5 +1,5 @@
-<!--pages/message/message.wxml-->
+<!--pages/account/account.wxml-->
 <view class="card">
-  <view class="name">doctor W</view>
+  <view class="name">病人 W</view>
   <view class="words">情况好转，训练有效</view>
 </view>

@@ -1,4 +1,4 @@
-/* pages/message/message.wxss */
+/* pages/account/account.wxss */
 .card{
   width: 100%;
   height: 130rpx;

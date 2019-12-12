@@ -11,7 +11,7 @@
   <view class="table">
     <view class="column">
       <view class="C tit">参与用户</view>
-      <view class="C" wx:for-items="{{jobuser}}" wx:for-item="item">
+      <view class="C person" wx:for-items="{{jobuser}}" wx:for-item="item" bindtap="">
         <text>{{item.userName}}</text>
         <text style='margin-left:30rpx;'>{{item.userAge}}岁</text>
       </view>

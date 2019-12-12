@@ -10,12 +10,12 @@ Page({
     items: [
       {
         icon: '../../img/icon_job_publish.png',
-        text: '发布任务',
+        text: '添加疾病种类',
         path: 'post'
       },
       {
         icon: '../../img/icon_job_continue.png',
-        text: '已发布任务',
+        text: '已添加疾病种类',
         path: 'continue'
       },
       /*{

@@ -106,6 +106,7 @@ Page({
     var describe = e.detail.value.jodDescribe;
     var type = e.detail.value.jobType;
     var id = app.globalData.doctorId;
+    var jobFrequency = "每天5次，每次20分钟";
     var file = "../../img/open.png";
     console.log(describe,title,id,type);
     console.log("lalalal");
@@ -136,78 +137,6 @@ Page({
       },
     })
   },
-
-
-  // //图片
-  // chooseImg: function () {
-  //   var that = this
-  //   wx.chooseImage({
-  //     count: 1, // 默认9
-  //     sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-  //     sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-  //     success: function (res) {
-  //       // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-  //       var tempFilePaths = res.tempFilePaths
-  //       that.setData({
-  //         photos: tempFilePaths
-  //       })
-  //     },
-  //     fail: function (res) {
-  //       wx.navigateTo({
-  //         url: '../../pages/error/error'
-  //       })
-  //     },
-  //   })
-  // },
-
-  // //日期
-  // getWeek(year, month, day) {
-  //   var that = this;
-  //   var d = new Date();
-  //   d.setFullYear(year);
-  //   d.setMonth(month - 1);
-  //   d.setDate(1);
-  //   var n = d.getDay();
-  //   var arr = [];
-  //   var Index = 0;
-  //   var dayN = 1;
-  //   for (var i = 0; i < day; i++) {
-  //     arr.push(dayN++);
-  //   }
-  //   var now = new Date();
-  //   var nowYear = now.getFullYear();
-  //   var nowMonth = now.getMonth() + 1;
-  //   var nowDay = now.getDate();
-  //   var val = 1;
-  //   if (year == nowYear) {
-  //     if (month == nowMonth) {
-  //       Index = arr.indexOf(nowDay);
-  //       val = nowDay;
-  //     }
-  //   }
-  //   that.setData({
-  //     weekNum: n,
-  //     dayList: arr,
-  //     dayIndex: Index,
-  //     tapThis: Index,
-  //     thisMonth: month,
-  //     thisYear: year,
-  //     chooseDate: year + "-" + month + "-" + val,
-  //   })
-  // },
-  // chooseDate(e) {
-  //   var that = this;
-  //   var n = e.currentTarget.dataset.index;
-  //   var val = e.currentTarget.dataset.value;
-  //   console.log(n);
-  //   if (n >= that.data.dayIndex) {
-  //     that.setData({
-  //       tapThis: n,
-  //       chooseDate: that.data.thisYear + "-" + that.data.thisMonth + "-" + val,
-  //       showModal: true,
-  //     })
-  //   }
-  // },
   /** 
    * 弹出框蒙层截断touchmove事件 
    */
@@ -226,65 +155,5 @@ Page({
     that.setData({
       showModal: false
     })
-  },
-  // getDayNum(year, month) { //传入参数年份 和 要计算的月份， 可以为字符串，也可以为数字。
-  //   var that = this
-  //   var d = new Date()
-  //   d.setFullYear(year)
-  //   d.setMonth(month)
-  //   d.setDate(0)
-  //   return d.getDate(0) //d.getDate() 即为此月的总天数！
-  // },
-
-  // //音频
-  // start: function () {
-  //   const options = {
-  //     duration: 10000, //指定录音的时长，单位 ms
-  //     sampleRate: 16000, //采样率
-  //     numberOfChannels: 1, //录音通道数
-  //     encodeBitRate: 96000, //编码码率
-  //     format: 'mp3', //音频格式，有效值 aac/mp3
-  //     frameSize: 50, //指定帧大小，单位 KB
-  //   }
-  //   //开始录音
-  //   recorderManager.start(options);
-  //   recorderManager.onStart(() => {
-  //     console.log('recorder start')
-  //   });
-  //   //错误回调
-  //   recorderManager.onError((res) => {
-  //     console.log(res);
-  //   })
-  // },
-  // //暂停录音
-  // pause: function () {
-  //   recorderManager.onPause();
-  //   console.log('暂停录音')
-  // },
-  // //停止录音
-  // stop: function () {
-  //   recorderManager.stop();
-  //   recorderManager.onStop((res) => {
-  //     this.tempFilePath = res.tempFilePath;
-  //     console.log('停止录音', res.tempFilePath)
-  //     const {
-  //       tempFilePath
-  //     } = res
-  //   })
-  // },
-  // //播放声音
-  // play: function () {
-  //   innerAudioContext.autoplay = true
-  //   innerAudioContext.src = this.tempFilePath,
-  //     innerAudioContext.onPlay(() => {
-  //       console.log('开始播放')
-  //     })
-  //   innerAudioContext.onError((res) => {
-  //     console.log(res.errMsg)
-  //     console.log(res.errCode)
-  //   })
-
-  // },
-  // //上传录音
-
+  }
 })

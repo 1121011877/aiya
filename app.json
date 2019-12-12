@@ -1,6 +1,5 @@
 {
   "pages": [
-    
     "pages/come/come",
     "pages/welcome/welcome",
     "pages/TakePhotos/TakePhotos",
@@ -16,7 +15,8 @@
     "pages/detail/detail",
     "pages/Mytest/Mytest",
     "pages/Ucenter/Ucenter",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/account/account"
   ],
   "window": {
     "backgroundTextStyle": "dark",
