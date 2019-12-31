@@ -1,0 +1,47 @@
+<!--pages/ChangeUser/ChangeUser.wxml-->
+ <view wx:if="{{!success}}">
+    <!-- 表格内容 -->
+    <form bindsubmit="submit">
+      <view class='row'>
+        <view class='info'>
+          <input   class= 'info-input' bindinput="handleNewChangesAgain" placeholder="{{userName}}" name="userName"/>
+        </view>
+      </view>
+      <view class='row'>
+        <view class='info'>
+          <input class= 'info-input' bindinput="handleNewChangesAgain" placeholder="性别" name="userSex"/>
+        </view>
+      </view>
+      <view class='row'>
+        <view class='info'>
+          <input class= 'info-input' bindinput="handleNewChanges" placeholder="年龄" name="userAge"/>
+         </view>
+      </view>
+      <view class='row'>
+        <view class='info'>
+          <input  class= 'info-input' bindinput="handleInputPhone" placeholder="{{userPhone}}" name="userPhone"/>
+        </view>
+        <!-- <button class='button' bindtap='doGetCode' disabled='{{disabled}}' style="background-color:{{color}}" >{{text}}</button> -->
+      </view>
+      <view class='row'>
+        <view class='info'>
+          <input  class= 'info-input' bindinput="handleVerificationCode" placeholder="验证码" name="userVerification"/>
+        </view>
+      </view>
+      <view class='row'>
+        <view class='info'>
+          <input  class= 'info-input' bindinput="handleNewChangesAgain" placeholder="诊断类型" />
+        </view>
+      </view>
+      <button class="weui-btn" type="primary" formType='submit'>提交</button> 
+    </form>
+ </view>
+
+ <view class = 'success' wx:if="{{success}}">
+    <view class='cheer'><icon type="success" size="24"/> 恭喜您注册成功!</view>
+    <button type = "default" class = 'return' bindtap='return_home'>返回首页</button>
+ </view>
+ <view class="footer">
+    <view>Copyright©艾尔克林</view>
+    <view>空军军医大学第三附属医院</view>
+  </view>

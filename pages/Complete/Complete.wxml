@@ -1,0 +1,16 @@
+<!--pages/Complete/Complete.wxml-->
+<view class="searchback" hidden='{{ishidden}}'>
+  <form bindsubmit='submit'>
+    <view class="search">
+      <input class="phone" type='text' name="phone" placeholder="请输入要添加的患者手机号"></input>
+      <button class='searchbtn' formType='submit'>搜索</button>
+    </view>
+  </form>
+  <view class="user" wx:if="{{mark}}">
+    <view class="detail name">姓名：{{user.userName}}</view>
+    <view class="detail age">年龄：{{user.userAge}}</view>
+    <view class="detail">手机号：{{user.userPhone}}</view>
+    <view class="adduser {{isadd ? 'added':''}}" bindtap='changeuser'>+</view>
+  </view>
+  <view class="none" wx:else hidden='{{hiddenpeople}}'>查无此人</view>
+</view>

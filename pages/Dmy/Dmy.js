@@ -18,11 +18,11 @@ Page({
         text: '已添加疾病种类',
         path: 'continue'
       },
-      /*{
+      {
         icon: '../../img/icon_job_complete.png',
-        text: '完成情况',
+        text: '完善病人信息',
         path: 'complete',
-      },*/
+      },
     ],
   
     message: [{
