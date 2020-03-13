@@ -34,19 +34,22 @@
           </view>
         </view>
         <!-- 医院 -->
-        <view class='row'>
-          <view class='info'>
+        <!-- <view class='row'>
+          <view class='info'> -->
             <!-- <input  class= 'info-input' placeholder-class="plah" bindinput="handleNewChangesAgain" placeholder="请输入你所在的医院" name="dHospital"/> -->
-            <view class="info-input">第四军医大口腔医院</view>
-          </view>
-        </view>
+            <!-- 引入下拉框组件 -->
+            <Select prop-array='{{selectArray}}' now-text="{{nowText}}" class=""></Select>
+            <!-- <view class="info-input">第四军医大口腔医院</view> -->
+          <!-- </view>
+        </view> -->
         <!-- 科室 -->
-        <view class='row'>
+        <Select prop-array='{{selectArrayLabel}}' now-text="{{nowTextLabel}}" class=""></Select>
+        <!-- <view class='row'>
           <view class='info'>
             <!-- <input   class= 'info-input' placeholder-class="plah" bindinput="handleNewChangesAgain" placeholder="请输入你所在的科室" name="dOffice"/> -->
-            <view class="info-input">口腔科</view>
+            <!-- <view class="info-input">口腔科</view>
           </view>
-        </view>
+        </view> -->
         <!-- 提交按钮 -->
         <view style="text-align:center;margin-top:50rpx; " >
           <button class="weui-btn" type="primary" formType='submit'>提交</button>

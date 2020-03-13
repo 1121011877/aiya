@@ -16,7 +16,7 @@
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell">
         <view class="weui-cell__bd">
-          <textarea class="weui-textarea" placeholder="请输入随份医嘱" style="height: 3.3em" name="jodDescribe" value='{{form_info}}' />
+          <textarea class="weui-textarea" placeholder="请输入随访医嘱" style="height: 3.3em" name="jodDescribe" value='{{form_info}}' />
         </view>
       </view>
     </view>

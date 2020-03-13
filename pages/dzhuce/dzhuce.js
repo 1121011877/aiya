@@ -15,6 +15,18 @@ Page({
     NewChangesAgain: '',
     success: false,
     state: '',
+    //医院下拉框组件的数据
+    nowText:"请选择医院",
+    selectArray:[{
+      "id": "1",
+      "text": "西安第四军医大学口腔医院"
+    }],
+    //科室下拉框数组信息
+    nowTextLabel:"请选择科室",
+    selectArrayLabel:[{
+      "id": "1",
+      "text":"口腔科"
+    }]
   },
   /**
   * 生命周期函数--监听页面加载

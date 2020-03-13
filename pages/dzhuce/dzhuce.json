@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "医生注册",
-  "usingComponents": {}
+  "usingComponents": {
+    "Select": "/components/select/select"
+  }
 }

@@ -98,3 +98,8 @@ font-size: 30rpx;
 color: #a09e9e;
 text-align: center;
 }
+
+/**********下拉框  */
+.select{
+  width: 200rpx;
+}

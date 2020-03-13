@@ -19,7 +19,9 @@
     "pages/message/message",
     "pages/account/account",
     "pages/ChangeUser/ChangeUser",
-    "pages/Complete/Complete"
+    "pages/Complete/Complete",
+    "components/select/select"
+    
   ],
   "window": {
     "backgroundTextStyle": "dark",
